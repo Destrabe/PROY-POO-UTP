@@ -1,13 +1,17 @@
 package IGU;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
+import logica.controladoraLogicaLogin;
 
 public class login extends javax.swing.JFrame {
     
+    controladoraLogicaLogin control;
     int xMouse, yMouse;
     
     public login() {
         initComponents();
+        control = new controladoraLogicaLogin();
     }
 
     @SuppressWarnings("unchecked")
@@ -314,7 +318,19 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_passTxtMousePressed
 
     private void IngresarBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseClicked
-        javax.swing.JOptionPane.showMessageDialog(this, "Intento de login con los datos:\nUsuario: " + userTxt.getText() + "\nContraseña: " + String.valueOf(passTxt.getPassword()), "LOGIN", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        String usuario = userTxt.getText();
+        String contrasenia = passTxt.getText();
+        if (usuario.isEmpty() || contrasenia.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Debes completar ambos campos.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        String mensaje= control.validarUsuarios(usuario,contrasenia);
+        
+        if (mensaje.contains("correctos")) {
+        JOptionPane.showMessageDialog(this, mensaje, "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+        JOptionPane.showMessageDialog(this, mensaje, "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_IngresarBtnTxtMouseClicked
 
     private void headerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMousePressed
