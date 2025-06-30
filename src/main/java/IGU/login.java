@@ -147,6 +147,12 @@ public class login extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 IngresarBtnTxtMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                IngresarBtnTxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                IngresarBtnTxtMouseExited(evt);
+            }
         });
 
         javax.swing.GroupLayout IngresarBtnLayout = new javax.swing.GroupLayout(IngresarBtn);
@@ -335,6 +341,14 @@ public class login extends javax.swing.JFrame {
         exitBtn.setBackground(Color.white);
         exitBtnTxt.setForeground(Color.black);
     }//GEN-LAST:event_exitBtnTxtMouseExited
+
+    private void IngresarBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseExited
+        IngresarBtn.setBackground(new Color(45,62,85));
+    }//GEN-LAST:event_IngresarBtnTxtMouseExited
+
+    private void IngresarBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseEntered
+        IngresarBtn.setBackground(new Color(70, 95, 125));
+    }//GEN-LAST:event_IngresarBtnTxtMouseEntered
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private components.PanelRound IngresarBtn;
