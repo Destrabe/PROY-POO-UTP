@@ -4,6 +4,8 @@ import java.awt.Color;
 
 public class login extends javax.swing.JFrame {
     
+    int xMouse, yMouse;
+    
     public login() {
         initComponents();
     }
@@ -28,10 +30,17 @@ public class login extends javax.swing.JFrame {
         separatorPass = new javax.swing.JSeparator();
         IngresarBtn = new components.PanelRound();
         IngresarBtnTxt = new javax.swing.JLabel();
+        header = new javax.swing.JPanel();
+        exitBtn = new javax.swing.JPanel();
+        exitBtnTxt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setUndecorated(true);
+        setResizable(false);
 
         background.setBackground(new java.awt.Color(255, 255, 255));
+        background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelPrincipal.setBackground(new java.awt.Color(30, 41, 59));
 
@@ -78,6 +87,8 @@ public class login extends javax.swing.JFrame {
                 .addComponent(message03)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        background.add(panelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
 
         loginPnl.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -132,6 +143,11 @@ public class login extends javax.swing.JFrame {
         IngresarBtnTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         IngresarBtnTxt.setText("INGRESAR");
         IngresarBtnTxt.setToolTipText("");
+        IngresarBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IngresarBtnTxtMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout IngresarBtnLayout = new javax.swing.GroupLayout(IngresarBtn);
         IngresarBtn.setLayout(IngresarBtnLayout);
@@ -189,24 +205,65 @@ public class login extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
-        background.setLayout(backgroundLayout);
-        backgroundLayout.setHorizontalGroup(
-            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(54, 54, 54)
-                .addComponent(loginPnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54))
+        background.add(loginPnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 113, -1, -1));
+
+        header.setBackground(new java.awt.Color(255, 255, 255));
+        header.setForeground(new java.awt.Color(255, 255, 255));
+        header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                headerMouseDragged(evt);
+            }
+        });
+        header.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                headerMousePressed(evt);
+            }
+        });
+
+        exitBtn.setBackground(new java.awt.Color(255, 255, 255));
+
+        exitBtnTxt.setBackground(new java.awt.Color(0, 0, 0));
+        exitBtnTxt.setFont(new java.awt.Font("Dubai Light", 1, 30)); // NOI18N
+        exitBtnTxt.setForeground(new java.awt.Color(0, 0, 0));
+        exitBtnTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitBtnTxt.setText("X");
+        exitBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitBtnTxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitBtnTxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitBtnTxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout exitBtnLayout = new javax.swing.GroupLayout(exitBtn);
+        exitBtn.setLayout(exitBtnLayout);
+        exitBtnLayout.setHorizontalGroup(
+            exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitBtnTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
-        backgroundLayout.setVerticalGroup(
-            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(0, 113, Short.MAX_VALUE)
-                .addComponent(loginPnl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(120, 120, 120))
+        exitBtnLayout.setVerticalGroup(
+            exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitBtnTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, Short.MAX_VALUE)
         );
+
+        javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
+        header.setLayout(headerLayout);
+        headerLayout.setHorizontalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
+                .addGap(0, 860, Short.MAX_VALUE)
+                .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        headerLayout.setVerticalGroup(
+            headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        background.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -250,10 +307,42 @@ public class login extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_passTxtMousePressed
 
+    private void IngresarBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseClicked
+        javax.swing.JOptionPane.showMessageDialog(this, "Intento de login con los datos:\nUsuario: " + userTxt.getText() + "\nContraseña: " + String.valueOf(passTxt.getPassword()), "LOGIN", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_IngresarBtnTxtMouseClicked
+
+    private void headerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_headerMousePressed
+
+    private void headerMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x-xMouse,y- yMouse);
+    }//GEN-LAST:event_headerMouseDragged
+
+    private void exitBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exitBtnTxtMouseClicked
+
+    private void exitBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseEntered
+       exitBtn.setBackground(new Color(232,17,35,255));
+       exitBtnTxt.setForeground(Color.white);
+    }//GEN-LAST:event_exitBtnTxtMouseEntered
+
+    private void exitBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseExited
+        exitBtn.setBackground(Color.white);
+        exitBtnTxt.setForeground(Color.black);
+    }//GEN-LAST:event_exitBtnTxtMouseExited
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private components.PanelRound IngresarBtn;
     private javax.swing.JLabel IngresarBtnTxt;
     private javax.swing.JPanel background;
+    private javax.swing.JPanel exitBtn;
+    private javax.swing.JLabel exitBtnTxt;
+    private javax.swing.JPanel header;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel loginPnl;
     private javax.swing.JLabel logo;
