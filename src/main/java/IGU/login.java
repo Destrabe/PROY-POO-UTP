@@ -20,10 +20,10 @@ public class login extends javax.swing.JFrame {
 
         background = new javax.swing.JPanel();
         panelPrincipal = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
         message01 = new javax.swing.JLabel();
         message02 = new javax.swing.JLabel();
         message03 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         loginPnl = new javax.swing.JPanel();
         loginLabel = new javax.swing.JLabel();
         usuarioLabel = new javax.swing.JLabel();
@@ -32,8 +32,7 @@ public class login extends javax.swing.JFrame {
         separatorUsuario = new javax.swing.JSeparator();
         passTxt = new javax.swing.JPasswordField();
         separatorPass = new javax.swing.JSeparator();
-        IngresarBtn = new components.PanelRound();
-        IngresarBtnTxt = new javax.swing.JLabel();
+        btnIngresarLogin = new javax.swing.JButton();
         header = new javax.swing.JPanel();
         exitBtn = new javax.swing.JPanel();
         exitBtnTxt = new javax.swing.JLabel();
@@ -47,9 +46,6 @@ public class login extends javax.swing.JFrame {
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelPrincipal.setBackground(new java.awt.Color(30, 41, 59));
-
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
-        logo.setText("jLabel1");
 
         message01.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         message01.setForeground(new java.awt.Color(255, 255, 255));
@@ -66,30 +62,32 @@ public class login extends javax.swing.JFrame {
         message03.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         message03.setText("Optimiza tu proceso de ventas");
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Valentino\\OneDrive - Universidad Tecnologica del Peru\\Documents\\NetBeansProjects\\PROY-POO-UTP\\src\\main\\resources\\assets\\logo_temporal.png")); // NOI18N
+
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
-                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(105, 105, 105))
-            .addComponent(message01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(message01, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
             .addComponent(message02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(message03, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(message01)
+                .addGap(103, 103, 103)
+                .addComponent(jLabel1)
+                .addGap(39, 39, 39)
+                .addComponent(message01, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(message02)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(message03)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
 
         background.add(panelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
@@ -135,70 +133,40 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        IngresarBtn.setBackground(new java.awt.Color(45, 62, 85));
-        IngresarBtn.setRoundBottomLeft(50);
-        IngresarBtn.setRoundBottomRight(50);
-        IngresarBtn.setRoundTopLeft(50);
-        IngresarBtn.setRoundTopRight(50);
-
-        IngresarBtnTxt.setBackground(new java.awt.Color(45, 62, 85));
-        IngresarBtnTxt.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        IngresarBtnTxt.setForeground(new java.awt.Color(255, 255, 255));
-        IngresarBtnTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IngresarBtnTxt.setText("INGRESAR");
-        IngresarBtnTxt.setToolTipText("");
-        IngresarBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                IngresarBtnTxtMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                IngresarBtnTxtMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                IngresarBtnTxtMouseExited(evt);
+        btnIngresarLogin.setText("INGRESAR");
+        btnIngresarLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarLoginActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout IngresarBtnLayout = new javax.swing.GroupLayout(IngresarBtn);
-        IngresarBtn.setLayout(IngresarBtnLayout);
-        IngresarBtnLayout.setHorizontalGroup(
-            IngresarBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(IngresarBtnTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
-        );
-        IngresarBtnLayout.setVerticalGroup(
-            IngresarBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(IngresarBtnTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout loginPnlLayout = new javax.swing.GroupLayout(loginPnl);
         loginPnl.setLayout(loginPnlLayout);
         loginPnlLayout.setHorizontalGroup(
             loginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginPnlLayout.createSequentialGroup()
-                .addGroup(loginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(loginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(loginPnlLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(loginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(loginPnlLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(loginLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE))
-                            .addComponent(usuarioLabel)
-                            .addComponent(passLabel)
-                            .addComponent(userTxt)
-                            .addComponent(separatorUsuario)
-                            .addComponent(passTxt)
-                            .addComponent(separatorPass, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(loginPnlLayout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(IngresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(6, 6, 6)
+                        .addComponent(loginLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE))
+                    .addComponent(usuarioLabel)
+                    .addComponent(passLabel)
+                    .addComponent(userTxt)
+                    .addComponent(separatorUsuario)
+                    .addComponent(passTxt)
+                    .addComponent(separatorPass, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPnlLayout.createSequentialGroup()
+                .addContainerGap(94, Short.MAX_VALUE)
+                .addComponent(btnIngresarLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83))
         );
         loginPnlLayout.setVerticalGroup(
             loginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginPnlLayout.createSequentialGroup()
-                .addGap(1, 1, 1)
                 .addComponent(loginLabel)
-                .addGap(13, 13, 13)
+                .addGap(14, 14, 14)
                 .addComponent(usuarioLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(userTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -210,8 +178,8 @@ public class login extends javax.swing.JFrame {
                 .addComponent(passTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(separatorPass, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
-                .addComponent(IngresarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addComponent(btnIngresarLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -253,11 +221,15 @@ public class login extends javax.swing.JFrame {
         exitBtn.setLayout(exitBtnLayout);
         exitBtnLayout.setHorizontalGroup(
             exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(exitBtnTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitBtnLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(exitBtnTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         exitBtnLayout.setVerticalGroup(
             exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(exitBtnTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitBtnLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(exitBtnTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
@@ -317,22 +289,6 @@ public class login extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_passTxtMousePressed
 
-    private void IngresarBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseClicked
-        String usuario = userTxt.getText();
-        String contrasenia = passTxt.getText();
-        if (usuario.isEmpty() || contrasenia.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Debes completar ambos campos.", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-        String mensaje= control.validarUsuarios(usuario,contrasenia);
-        
-        if (mensaje.contains("correctos")) {
-        JOptionPane.showMessageDialog(this, mensaje, "Éxito", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-        JOptionPane.showMessageDialog(this, mensaje, "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_IngresarBtnTxtMouseClicked
-
     private void headerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMousePressed
         xMouse = evt.getX();
         yMouse = evt.getY();
@@ -358,24 +314,21 @@ public class login extends javax.swing.JFrame {
         exitBtnTxt.setForeground(Color.black);
     }//GEN-LAST:event_exitBtnTxtMouseExited
 
-    private void IngresarBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseExited
-        IngresarBtn.setBackground(new Color(45,62,85));
-    }//GEN-LAST:event_IngresarBtnTxtMouseExited
-
-    private void IngresarBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseEntered
-        IngresarBtn.setBackground(new Color(70, 95, 125));
-    }//GEN-LAST:event_IngresarBtnTxtMouseEntered
+    private void btnIngresarLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarLoginActionPerformed
+        usuario_entrada entrada= new usuario_entrada();
+        entrada.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnIngresarLoginActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private components.PanelRound IngresarBtn;
-    private javax.swing.JLabel IngresarBtnTxt;
     private javax.swing.JPanel background;
+    private javax.swing.JButton btnIngresarLogin;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
     private javax.swing.JPanel header;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel loginPnl;
-    private javax.swing.JLabel logo;
     private javax.swing.JLabel message01;
     private javax.swing.JLabel message02;
     private javax.swing.JLabel message03;
