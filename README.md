@@ -40,3 +40,5 @@ sobre los datos de ventas, usuarios y productos. La arquitectura sigue principio
 
 📁 Este repositorio forma parte de un proyecto académico de fin de ciclo.
 
+-
+
