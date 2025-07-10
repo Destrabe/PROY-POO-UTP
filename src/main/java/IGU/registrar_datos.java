@@ -5,18 +5,28 @@
 package IGU;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
+import logica.CarritoDeCompras;
+import logica.CarritoGlobal;
+import logica.Compra;
+import persistencia.CompraJpaController;
 
 /**
  *
  * @author Valentino
  */
 public class registrar_datos extends javax.swing.JFrame {
+    
+    private String producto;
+    private double precio;
+    private CarritoDeCompras carrito= CarritoGlobal.getCarrito();
 
     /**
      * Creates new form registrar_datos
      */
-    public registrar_datos() {
+    public registrar_datos(CarritoDeCompras carrito) {
         initComponents();
+        this.carrito = carrito;
     }
 
     /**
@@ -121,7 +131,7 @@ public class registrar_datos extends javax.swing.JFrame {
                 btnLimpiarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 210, 80));
+        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 450, 210, 80));
 
         btnGuardar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guardar.png"))); // NOI18N
@@ -132,7 +142,7 @@ public class registrar_datos extends javax.swing.JFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 210, 80));
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 210, 80));
         jPanel1.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 400, 30));
         jPanel1.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 400, 30));
         jPanel1.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, 400, 30));
@@ -153,13 +163,13 @@ public class registrar_datos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void volverbuttontxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseClicked
-        resumen_de_compra resumenCompra= new resumen_de_compra();
+        resumen_de_compra resumenCompra = new resumen_de_compra();
         resumenCompra.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_volverbuttontxtMouseClicked
 
     private void volverbuttontxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseEntered
-        volverbutton.setBackground(new Color(232,17,35,255));
+        volverbutton.setBackground(new Color(232, 17, 35, 255));
         volverbuttontxt.setForeground(Color.white);
     }//GEN-LAST:event_volverbuttontxtMouseEntered
 
@@ -178,45 +188,70 @@ public class registrar_datos extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        venta_final venta= new venta_final();
-        venta.setVisible(true);
+        String nombres = txtNombres.getText();
+        String apellidos = txtApellidos.getText();
+        String dni = txtDNI.getText();
+        String direccion = txtDireccion.getText();
+        String telefono = txtTelefono.getText();
+        String email = txtEmail.getText();
+
+        if (nombres.isEmpty() || dni.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nombre y DNI son obligatorios");
+            return;
+        }
+
+        if (carrito == null || carrito.getProductos().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "El carrito esta vacio");
+        }
+        carrito.limpiarProductosInvalidos();
+        for (String p : carrito.getProductos().keySet()) {
+            int cantidad = carrito.getCantidad(p);
+            double precio = carrito.getPrecio(p);
+            System.out.println(p + " - Cantidad: " + cantidad + " - Precio: " + precio);
+        }
+        
+        for (String nombreProducto : carrito.getProductos().keySet()) {
+            int cantidad = carrito.getCantidad(nombreProducto);
+            double precio = carrito.getPrecio(nombreProducto);
+            
+            System.out.println("Validando: " + nombreProducto + " | Cantidad: "+ cantidad + " | Precio: "+precio);
+            
+            if (nombreProducto == null || nombreProducto.trim().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Se encontro un producto sin nombre. Compra no registrada");
+                continue;
+            }
+            
+            if (cantidad<= 0 || precio <= 0.0) {
+                JOptionPane.showMessageDialog(null, "Producto con cantidad o precio invalido: " + nombreProducto);
+                continue;
+            }
+            
+            if (cantidad>0 && precio>0.0){
+            Compra compra = new Compra(
+                    nombreProducto, 
+                    precio,
+                    nombres, 
+                    apellidos, 
+                    dni, 
+                    direccion, 
+                    telefono, 
+                    email, 
+                    cantidad
+            );
+                try {
+                    new CompraJpaController().crear(compra);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Error al guardar: "+e.getMessage());
+                }
+            }
+        }
+        carrito.limpiarProductosInvalidos();
+        resumen_de_compra resumen = new resumen_de_compra();
+        resumen.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(registrar_datos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(registrar_datos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(registrar_datos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(registrar_datos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new registrar_datos().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;

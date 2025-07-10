@@ -5,7 +5,7 @@
 package IGU;
 
 import java.awt.Color;
-import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import logica.CarritoDeCompras;
 import logica.CarritoGlobal;
 import logica.Categoria;
@@ -17,12 +17,12 @@ import persistencia.ProductoJpaController;
  *
  * @author Valentino
  */
-public class tienda_usuario extends javax.swing.JFrame {
+public class tienda_usuario_laptops extends javax.swing.JFrame {
     private CarritoDeCompras carrito = CarritoGlobal.getCarrito();
     /**
      * Creates new form tienda_usuario
      */
-    public tienda_usuario() {
+    public tienda_usuario_laptops() {
         initComponents();
     }
 
@@ -48,18 +48,17 @@ public class tienda_usuario extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        btnaniadir15pro = new javax.swing.JButton();
+        btnaniadirlenovo = new javax.swing.JButton();
         panelRound2 = new components.PanelRound();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        btnaniadir15promax = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
+        btnaniadirhp = new javax.swing.JButton();
         panelRound3 = new components.PanelRound();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        btnaniadir16 = new javax.swing.JButton();
+        btnaniadirvictus = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -129,11 +128,6 @@ public class tienda_usuario extends javax.swing.JFrame {
         btncategorialaptops.setForeground(new java.awt.Color(0, 0, 0));
         btncategorialaptops.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Laptop_pequeño.png"))); // NOI18N
         btncategorialaptops.setText("LAPTOPS");
-        btncategorialaptops.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncategorialaptopsActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 36)); // NOI18N
         jLabel1.setText("TIENDA");
@@ -142,6 +136,11 @@ public class tienda_usuario extends javax.swing.JFrame {
         btncategoriacelulares.setForeground(new java.awt.Color(0, 0, 0));
         btncategoriacelulares.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Celular_pequeño.png"))); // NOI18N
         btncategoriacelulares.setText("CELULARES");
+        btncategoriacelulares.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncategoriacelularesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -185,8 +184,8 @@ public class tienda_usuario extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Ebrima", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("CELULARES");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
+        jLabel2.setText("LAPTOPS");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, -1, -1));
 
         panelRound1.setBackground(new java.awt.Color(153, 153, 153));
         panelRound1.setRoundBottomLeft(50);
@@ -195,26 +194,26 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound1.setRoundTopRight(50);
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/iphone15pro.png"))); // NOI18N
-        panelRound1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, -10, -1, -1));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/lenovo.png"))); // NOI18N
+        panelRound1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("IPHONE 15 PRO");
+        jLabel3.setText("LAPTOP LENOVO");
         panelRound1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("S/ 3800");
+        jLabel7.setText("S/ 2900");
         panelRound1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
-        btnaniadir15pro.setText("Añadir");
-        btnaniadir15pro.addActionListener(new java.awt.event.ActionListener() {
+        btnaniadirlenovo.setText("Añadir");
+        btnaniadirlenovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaniadir15proActionPerformed(evt);
+                btnaniadirlenovoActionPerformed(evt);
             }
         });
-        panelRound1.add(btnaniadir15pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
+        panelRound1.add(btnaniadirlenovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
 
         jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 160, 270));
 
@@ -226,31 +225,26 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound2.setRoundTopRight(50);
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/iphone15promax.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/hp.png"))); // NOI18N
         panelRound2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("IPHONE 15 PRO");
-        panelRound2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 140, -1));
+        jLabel8.setText("LAPTOP HP");
+        panelRound2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 100, -1));
 
         jLabel10.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("S/ 4000 ");
+        jLabel10.setText("S/ 3090");
         panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
-        btnaniadir15promax.setText("Añadir");
-        btnaniadir15promax.addActionListener(new java.awt.event.ActionListener() {
+        btnaniadirhp.setText("Añadir");
+        btnaniadirhp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaniadir15promaxActionPerformed(evt);
+                btnaniadirhpActionPerformed(evt);
             }
         });
-        panelRound2.add(btnaniadir15promax, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
-
-        jLabel13.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("MAX");
-        panelRound2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+        panelRound2.add(btnaniadirhp, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
 
         jPanel1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 160, -1));
 
@@ -261,12 +255,12 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound3.setRoundTopRight(50);
         panelRound3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/iphone16.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/victus.png"))); // NOI18N
         panelRound3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("IPHONE 16 PRO");
+        jLabel9.setText("LAPTOP GAYMER");
         panelRound3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -274,17 +268,17 @@ public class tienda_usuario extends javax.swing.JFrame {
         jLabel11.setText("S/ 4500");
         panelRound3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
-        btnaniadir16.setText("Añadir");
-        btnaniadir16.addActionListener(new java.awt.event.ActionListener() {
+        btnaniadirvictus.setText("Añadir");
+        btnaniadirvictus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaniadir16ActionPerformed(evt);
+                btnaniadirvictusActionPerformed(evt);
             }
         });
-        panelRound3.add(btnaniadir16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
+        panelRound3.add(btnaniadirvictus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
 
-        jLabel12.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setText("MAX");
+        jLabel12.setText("VICTUS");
         panelRound3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
         jPanel1.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 140, 160, 270));
@@ -309,7 +303,7 @@ public class tienda_usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBtnTxtMouseClicked
 
     private void exitBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseEntered
-        exitBtn.setBackground(new Color(232,17,35,255));
+        exitBtn.setBackground(new Color(232, 17, 35, 255));
         exitBtnTxt.setForeground(Color.white);
     }//GEN-LAST:event_exitBtnTxtMouseEntered
 
@@ -319,55 +313,50 @@ public class tienda_usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBtnTxtMouseExited
 
     private void volverbuttontxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseClicked
-        usuario_entrada entrada= new usuario_entrada();
+        usuario_entrada entrada = new usuario_entrada();
         entrada.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_volverbuttontxtMouseClicked
 
     private void volverbuttontxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseEntered
-        volverbutton.setBackground(new Color(232,17,35,255));
+        volverbutton.setBackground(new Color(232, 17, 35, 255));
         volverbuttontxt.setForeground(Color.white);
     }//GEN-LAST:event_volverbuttontxtMouseEntered
 
     private void volverbuttontxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseExited
-        volverbutton.setBackground(new Color(30,41,59));
+        volverbutton.setBackground(new Color(30, 41, 59));
         volverbuttontxt.setForeground(Color.black);
     }//GEN-LAST:event_volverbuttontxtMouseExited
 
     private void btnCompletarCompraTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompletarCompraTiendaActionPerformed
-        if (carrito.getProductos().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "El carrito está vacio, Añade productos");
-            return;
-        }
-        
-        registrar_datos registrar= new registrar_datos(carrito);
+        registrar_datos registrar = new registrar_datos(carrito);
         registrar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnCompletarCompraTiendaActionPerformed
 
-    private void btncategorialaptopsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncategorialaptopsActionPerformed
-        tienda_usuario_laptops laptops=new tienda_usuario_laptops();
-        laptops.setVisible(true);
+    private void btncategoriacelularesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncategoriacelularesActionPerformed
+        tienda_usuario celulares = new tienda_usuario();
+        celulares.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btncategorialaptopsActionPerformed
+    }//GEN-LAST:event_btncategoriacelularesActionPerformed
 
-    private void btnaniadir15proActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadir15proActionPerformed
-        carrito.agregarProducto("IPHONE 15 PRO", 3800.0);        
-    }//GEN-LAST:event_btnaniadir15proActionPerformed
+    private void btnaniadirlenovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadirlenovoActionPerformed
+        carrito.agregarProducto("LAPTOP LENOVO", 2900);
+    }//GEN-LAST:event_btnaniadirlenovoActionPerformed
 
-    private void btnaniadir15promaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadir15promaxActionPerformed
-        carrito.agregarProducto("IPHONE 15 PRO MAX",4000.0);
-    }//GEN-LAST:event_btnaniadir15promaxActionPerformed
+    private void btnaniadirhpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadirhpActionPerformed
+        carrito.agregarProducto("LAPTOP HP", 3090);
+    }//GEN-LAST:event_btnaniadirhpActionPerformed
 
-    private void btnaniadir16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadir16ActionPerformed
-        carrito.agregarProducto("IPHONE 16 PRO MAX",4500.0);
-    }//GEN-LAST:event_btnaniadir16ActionPerformed
+    private void btnaniadirvictusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadirvictusActionPerformed
+        carrito.agregarProducto("LAPTOP VICTUS", 4500);
+    }//GEN-LAST:event_btnaniadirvictusActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCompletarCompraTienda;
-    private javax.swing.JButton btnaniadir15pro;
-    private javax.swing.JButton btnaniadir15promax;
-    private javax.swing.JButton btnaniadir16;
+    private javax.swing.JButton btnaniadirhp;
+    private javax.swing.JButton btnaniadirlenovo;
+    private javax.swing.JButton btnaniadirvictus;
     private javax.swing.JButton btncategoriacelulares;
     private javax.swing.JButton btncategorialaptops;
     private javax.swing.JPanel exitBtn;
@@ -376,7 +365,6 @@ public class tienda_usuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

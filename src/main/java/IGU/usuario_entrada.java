@@ -5,6 +5,8 @@
 package IGU;
 
 import java.awt.Color;
+import logica.CarritoDeCompras;
+import logica.CarritoGlobal;
 
 /**
  *
@@ -12,11 +14,18 @@ import java.awt.Color;
  */
 public class usuario_entrada extends javax.swing.JFrame {
 
+    private CarritoDeCompras carrito = CarritoGlobal.getCarrito();
+
     /**
      * Creates new form usuario_entrada
      */
     public usuario_entrada() {
         initComponents();
+        carrito.limpiarCarrito();
+        
+        
+        System.out.println("Carrito despues de limpiar: ");
+        System.out.println("Cantidad de productos: "+ CarritoGlobal.getCarrito().getProductos().size());
     }
 
     /**
@@ -131,7 +140,7 @@ public class usuario_entrada extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBtnTxtMouseClicked
 
     private void exitBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseEntered
-        exitBtn.setBackground(new Color(232,17,35,255));
+        exitBtn.setBackground(new Color(232, 17, 35, 255));
         exitBtnTxt.setForeground(Color.white);
     }//GEN-LAST:event_exitBtnTxtMouseEntered
 
@@ -141,51 +150,17 @@ public class usuario_entrada extends javax.swing.JFrame {
     }//GEN-LAST:event_exitBtnTxtMouseExited
 
     private void btnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosActionPerformed
-        tienda_usuario tienda= new tienda_usuario();
+        tienda_usuario tienda = new tienda_usuario();
         tienda.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnProductosActionPerformed
 
     private void btnverComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnverComprasActionPerformed
-        ver_compras_realizadas comprasRealizadas= new ver_compras_realizadas();
+        ver_compras_realizadas comprasRealizadas = new ver_compras_realizadas(carrito);
         comprasRealizadas.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnverComprasActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(usuario_entrada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(usuario_entrada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(usuario_entrada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(usuario_entrada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new usuario_entrada().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;

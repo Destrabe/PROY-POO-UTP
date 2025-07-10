@@ -5,12 +5,16 @@
 package IGU;
 
 import java.awt.Color;
+import logica.CarritoDeCompras;
+import logica.CarritoGlobal;
 
 /**
  *
  * @author Valentino
  */
 public class venta_final extends javax.swing.JFrame {
+
+    private CarritoDeCompras carrito = CarritoGlobal.getCarrito();
 
     /**
      * Creates new form venta_final
@@ -147,67 +151,34 @@ public class venta_final extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void volverbuttontxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseClicked
-        tienda_usuario volver= new tienda_usuario();
+        tienda_usuario volver = new tienda_usuario();
         volver.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_volverbuttontxtMouseClicked
 
     private void volverbuttontxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseEntered
-        volverbutton.setBackground(new Color(232,17,35,255));
+        volverbutton.setBackground(new Color(232, 17, 35, 255));
         volverbuttontxt.setForeground(Color.white);
     }//GEN-LAST:event_volverbuttontxtMouseEntered
 
     private void volverbuttontxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseExited
-        volverbutton.setBackground(new Color(0,153,204));
+        volverbutton.setBackground(new Color(0, 153, 204));
         volverbuttontxt.setForeground(Color.black);
     }//GEN-LAST:event_volverbuttontxtMouseExited
 
     private void btnSeguirComprandoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeguirComprandoActionPerformed
-        tienda_usuario tienda= new tienda_usuario();
+        tienda_usuario tienda = new tienda_usuario();
         tienda.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnSeguirComprandoActionPerformed
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-        usuario_entrada entrada= new usuario_entrada();
+        carrito.limpiarCarrito();
+        
+        usuario_entrada entrada = new usuario_entrada();
         entrada.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnCerrarActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(venta_final.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(venta_final.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(venta_final.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(venta_final.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new venta_final().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCerrar;
