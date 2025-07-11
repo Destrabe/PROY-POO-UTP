@@ -98,7 +98,7 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="X"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Hand Cursor"/>
+                  <Color id="Cursor Por defecto"/>
                 </Property>
               </Properties>
               <Events>
@@ -116,7 +116,7 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Productos"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Hand Cursor"/>
+              <Color id="Cursor Por defecto"/>
             </Property>
             <Property name="focusPainted" type="boolean" value="false"/>
           </Properties>
@@ -125,7 +125,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="220" width="480" height="110"/>
+              <AbsoluteConstraints x="50" y="140" width="430" height="110"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -134,9 +134,9 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Comic Sans MS" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ver Compras"/>
+            <Property name="text" type="java.lang.String" value="Cerrar Sesion"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Hand Cursor"/>
+              <Color id="Cursor Por defecto"/>
             </Property>
             <Property name="focusPainted" type="boolean" value="false"/>
           </Properties>
@@ -145,7 +145,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="30" y="370" width="480" height="110"/>
+              <AbsoluteConstraints x="50" y="420" width="430" height="110"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -168,12 +168,32 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/assets/logo_temporal.png"/>
+              <Image iconType="2" name="C:\Users\marco\Documents\NetBeansProjects\PROY-POO\src\main\resources\logo\logo_temporal.png"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="630" y="250" width="150" height="160"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnverCompras1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Comic Sans MS" size="24" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ver Compras"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Cursor Por defecto"/>
+            </Property>
+            <Property name="focusPainted" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnverCompras1ActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="50" y="280" width="430" height="110"/>
             </Constraint>
           </Constraints>
         </Component>

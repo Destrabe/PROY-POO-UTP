@@ -9,6 +9,11 @@ import logica.Usuario;
 import logica.controladoraLogicaLogin;
 import logica.rol;
 
+/**
+ *
+ * @author Marco
+ */
+
 public class agregarUsuarios extends javax.swing.JFrame {
 
     int xMouse, yMouse;
@@ -66,7 +71,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
 
         principal.setBackground(new java.awt.Color(30, 41, 59));
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\logo\\logo_temporal.png")); // NOI18N
 
         texto01.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         texto01.setForeground(new java.awt.Color(255, 255, 255));
@@ -287,7 +292,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
 
         volverBtnTxt.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         volverBtnTxt.setForeground(new java.awt.Color(255, 255, 255));
-        volverBtnTxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/backIcon.png"))); // NOI18N
+        volverBtnTxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\Icons\\backIcon.png")); // NOI18N
         volverBtnTxt.setText("Volver");
         volverBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

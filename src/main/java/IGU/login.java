@@ -5,6 +5,11 @@ import javax.swing.JOptionPane;
 import logica.Usuario;
 import logica.controladoraLogicaLogin;
 
+/**
+ *
+ * @author Marco
+ */
+
 public class login extends javax.swing.JFrame {
     
     controladoraLogicaLogin control;
@@ -51,7 +56,7 @@ public class login extends javax.swing.JFrame {
 
         panelPrincipal.setBackground(new java.awt.Color(30, 41, 59));
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\logo\\logo_temporal.png")); // NOI18N
 
         message01.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         message01.setForeground(new java.awt.Color(255, 255, 255));
@@ -345,14 +350,14 @@ public class login extends javax.swing.JFrame {
            String rol= user.getUnRol().getNombreRol();
            
            if(rol.equals("admin")){
-               principalAdmin princUser = new principalAdmin(control,user);
-               princUser.setVisible(true);
-               princUser.setLocationRelativeTo(null);
-               this.dispose();
-           }if(rol.equals("user")){
-               principalUser princAdmin = new principalUser(control,user);
+               principalAdmin princAdmin = new principalAdmin(control,user);
                princAdmin.setVisible(true);
                princAdmin.setLocationRelativeTo(null);
+               this.dispose();
+           }if(rol.equals("user")){
+               usuario_entrada princUser = new usuario_entrada(control,user);
+               princUser.setVisible(true);
+               princUser.setLocationRelativeTo(null);
                this.dispose();
            }
         }
