@@ -36,7 +36,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.6.0</version>
+            <version>42.7.2</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
@@ -86,5 +86,14 @@
         <maven.compiler.release>17</maven.compiler.release>
         <exec.mainClass>com.mycompany.proy.poo.PROYPOO</exec.mainClass>
     </properties>
-
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>META-INF/persistence.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 </project>
