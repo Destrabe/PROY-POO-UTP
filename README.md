@@ -1,54 +1,41 @@
-# 🛒 Sistema de Ventas - Proyecto Final POO (UTP)
+# Sistema de Ventas - Proyecto Final POO (UTP)
 
-Este es un **Sistema de Ventas** desarrollado como proyecto final del curso de **Programación Orientada a Objetos** en la **Universidad Tecnológica del Perú (UTP)**.  
-El sistema permite la gestión de productos, usuarios y ventas, con control de acceso por roles, y persistencia de datos en una base de datos **PostgreSQL** alojada en **Railway**.
+Este repositorio contiene el desarrollo de un sistema de ventas como aplicación de escritorio, desarrollado en Java utilizando **Swing** para la interfaz gráfica, **JPA** como ORM y **PostgreSQL** como base de datos, alojada en **Railway**.
 
----
+## 🛠️ Tecnologías utilizadas
 
-## 🚀 Funcionalidades Principales
+- Java (JDK 17)
+- Java Swing (GUI)
+- JPA / Hibernate
+- PostgreSQL (Railway)
+- NetBeans (IDE recomendado)
 
-### 🔐 Manejo de Roles
+## 📋 Descripción
 
-- **Administrador**:
-  - Crear, editar y eliminar usuarios.
-  - Crear, editar y eliminar productos.
-  - Ver todas las ventas realizadas por todos los clientes.
+El sistema permite realizar operaciones básicas de gestión comercial mediante un CRUD completo (Crear, Leer, Actualizar, Eliminar) sobre los datos de ventas, usuarios y productos. La arquitectura sigue principios de programación orientada a objetos y separación de capas (lógica, persistencia, interfaz gráfica).
 
-- **Cliente**:
-  - Realizar compras seleccionando productos.
-  - Ingresar sus datos para completar la venta.
-  - Ver su historial de compras personales.
+> ⚠️ Este proyecto está configurado para uso académico y no incluye las credenciales de conexión a la base de datos por motivos de seguridad.
 
----
+## 🔐 Funcionalidades principales
 
-## 🧱 Tecnologías Utilizadas
+- Gestión de usuarios (crear, editar, eliminar)
+- Inicio de sesión (login)
+- Registro y edición de productos
+- Control de ventas
+- Conexión a base de datos remota (Railway – PostgreSQL)
+- Interfaz amigable con Java Swing
 
-- **Lenguaje**: Java (JDK 17 o superior)
-- **IDE**: NetBeans
-- **Interfaz Gráfica**: Java Swing
-- **Persistencia**: Hibernate (JPA)
-- **Base de Datos**: PostgreSQL (Railway)
-- **ORM**: Hibernate
-- **Gestor de dependencias**: Maven
-- **Control de versiones**: Git + GitHub
+## 🚫 Importante
 
----
+> El proyecto **no puede ejecutarse directamente** desde este repositorio debido a la ausencia de credenciales de conexión a la base de datos.  
+> Si deseas probarlo, deberás configurar manualmente la conexión a tu propia base de datos PostgreSQL.
 
-## 📁 Estructura del Proyecto
+## 🧪 Estado del proyecto
 
-- `modelo`: Entidades JPA (`Usuario`, `Producto`, `Venta`, etc.)
-- `controlador`: Lógica de negocio y conexión entre vista y modelo.
-- `vista`: Interfaces gráficas creadas con Java Swing.
-- `META-INF/persistence.xml`: Configuración de Hibernate y PostgreSQL.
-- `pom.xml`: Archivo de configuración Maven.
+✅ Funcional – Proyecto finalizado para entrega académica.
 
 ---
 
-## 🛠️ Requisitos para Ejecutar
+📁 Este repositorio forma parte de un proyecto académico de fin de ciclo.
 
-1. Tener **Java 17 o superior** instalado.
-2. Tener **NetBeans** (recomendado NetBeans 15 o superior).
-3. Tener conexión a internet para acceder a la base de datos en Railway.
-4. Clonar el repositorio desde GitHub:
-   ```bash
-   git clone https://github.com/usuario/repositorio.git
+
