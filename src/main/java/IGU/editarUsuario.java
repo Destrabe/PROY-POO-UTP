@@ -1,6 +1,7 @@
 
 package IGU;
 
+import components.TextPrompt;
 import java.awt.Color;
 import java.util.List;
 import javax.swing.JDialog;
@@ -31,6 +32,8 @@ public class editarUsuario extends javax.swing.JFrame {
 
         this.setSize(900, 550);
         this.setLocationRelativeTo(null);
+        TextPrompt userTextField = new TextPrompt("Ingrese su nuevo nombre de usuario",userTxt);
+        TextPrompt passTextField = new TextPrompt("Ingrese su nueva contraseña",passTxt);
     }
 
     @SuppressWarnings("unchecked")
@@ -51,12 +54,12 @@ public class editarUsuario extends javax.swing.JFrame {
         userTxt = new javax.swing.JTextField();
         passLabel = new javax.swing.JLabel();
         separatorUsuario = new javax.swing.JSeparator();
-        passTxt = new javax.swing.JPasswordField();
         separatorPass = new javax.swing.JSeparator();
         IngresarBtn = new components.PanelRound();
         IngresarBtnTxt = new javax.swing.JLabel();
         rolCmb = new javax.swing.JComboBox<>();
         rolTxt = new javax.swing.JLabel();
+        passTxt = new javax.swing.JTextField();
         volverBtn = new components.PanelRound();
         volverBtnTxt = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
@@ -133,7 +136,7 @@ public class editarUsuario extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
+            .addGroup(principalLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(logo)
                 .addGap(105, 105, 105))
@@ -168,8 +171,7 @@ public class editarUsuario extends javax.swing.JFrame {
         usuarioLabel.setText("USUARIO");
 
         userTxt.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        userTxt.setForeground(new java.awt.Color(204, 204, 204));
-        userTxt.setText("Ingrese su nombre de usuario");
+        userTxt.setForeground(new java.awt.Color(0, 0, 0));
         userTxt.setBorder(null);
         userTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -185,16 +187,6 @@ public class editarUsuario extends javax.swing.JFrame {
         passLabel.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         passLabel.setForeground(new java.awt.Color(0, 0, 0));
         passLabel.setText("CONTRASEÑA");
-
-        passTxt.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        passTxt.setText("********");
-        passTxt.setToolTipText("");
-        passTxt.setBorder(null);
-        passTxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                passTxtMousePressed(evt);
-            }
-        });
 
         IngresarBtn.setBackground(new java.awt.Color(45, 62, 85));
         IngresarBtn.setRoundBottomLeft(20);
@@ -244,10 +236,15 @@ public class editarUsuario extends javax.swing.JFrame {
         rolTxt.setForeground(new java.awt.Color(0, 0, 0));
         rolTxt.setText("ROL");
 
+        passTxt.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        passTxt.setForeground(new java.awt.Color(0, 0, 0));
+        passTxt.setBorder(null);
+
         javax.swing.GroupLayout loginPnlLayout = new javax.swing.GroupLayout(loginPnl);
         loginPnl.setLayout(loginPnlLayout);
         loginPnlLayout.setHorizontalGroup(
             loginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(loginLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(loginPnlLayout.createSequentialGroup()
                 .addGroup(loginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(loginPnlLayout.createSequentialGroup()
@@ -259,7 +256,6 @@ public class editarUsuario extends javax.swing.JFrame {
                                     .addComponent(passLabel)
                                     .addComponent(userTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
                                     .addComponent(separatorUsuario)
-                                    .addComponent(passTxt)
                                     .addComponent(separatorPass, javax.swing.GroupLayout.Alignment.TRAILING)))
                             .addGroup(loginPnlLayout.createSequentialGroup()
                                 .addGap(140, 140, 140)
@@ -267,13 +263,15 @@ public class editarUsuario extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(loginPnlLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(rolCmb, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(rolCmb, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(loginPnlLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(loginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(loginPnlLayout.createSequentialGroup()
+                                .addComponent(rolTxt)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(passTxt))))
                 .addContainerGap())
-            .addComponent(loginLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(loginPnlLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(rolTxt)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         loginPnlLayout.setVerticalGroup(
             loginPnlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,8 +286,8 @@ public class editarUsuario extends javax.swing.JFrame {
                 .addComponent(separatorUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(passTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(passTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(separatorPass, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -380,36 +378,16 @@ public class editarUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void userTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userTxtMousePressed
-        if (userTxt.getText().equals("Ingrese su nombre de usuario")) {
-            userTxt.setText("");
-            userTxt.setForeground(Color.BLACK);
-        }
 
-        if (String.valueOf(passTxt.getPassword()).isEmpty()) {
-            passTxt.setText("********");
-            passTxt.setForeground(Color.GRAY);
-        }
     }//GEN-LAST:event_userTxtMousePressed
 
     private void userTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_userTxtActionPerformed
 
-    private void passTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passTxtMousePressed
-        if (String.valueOf(passTxt.getPassword()).equals("********")) {
-            passTxt.setText("");
-            passTxt.setForeground(Color.BLACK);
-        }
-
-        if (userTxt.getText().isEmpty()) {
-            userTxt.setText("Ingrese su nombre de usuario");
-            userTxt.setForeground(Color.GRAY);
-        }
-    }//GEN-LAST:event_passTxtMousePressed
-
     private void IngresarBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseClicked
         String usuario = userTxt.getText();
-        String contra = passTxt.getText();
+        String contra = passTxtAntiguo.getText();
         String rol = (String) rolCmb.getSelectedItem();
         
         control.editarUsuario(user,usuario,contra,rol);
@@ -525,7 +503,7 @@ public class editarUsuario extends javax.swing.JFrame {
     private javax.swing.JPanel loginPnl;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel passLabel;
-    private javax.swing.JPasswordField passTxt;
+    private javax.swing.JTextField passTxt;
     private javax.swing.JPanel principal;
     private javax.swing.JComboBox<String> rolCmb;
     private javax.swing.JLabel rolTxt;

@@ -1,5 +1,6 @@
 package IGU;
 
+import components.TextPrompt;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import logica.Usuario;
@@ -20,6 +21,8 @@ public class login extends javax.swing.JFrame {
         this.setSize(900, 550);
         this.setLocationRelativeTo(null);
         control = new controladoraLogicaLogin();
+        TextPrompt userTextField = new TextPrompt("Ingrese su nombre de usuario",userTxt);
+        TextPrompt passTextField = new TextPrompt("Ingrese su contraseña",passTxt);
     }
 
     @SuppressWarnings("unchecked")
@@ -114,8 +117,7 @@ public class login extends javax.swing.JFrame {
         usuarioLabel.setText("USUARIO");
 
         userTxt.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        userTxt.setForeground(new java.awt.Color(204, 204, 204));
-        userTxt.setText("Ingrese su nombre de usuario");
+        userTxt.setForeground(new java.awt.Color(0, 0, 0));
         userTxt.setBorder(null);
         userTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -132,8 +134,8 @@ public class login extends javax.swing.JFrame {
         passLabel.setForeground(new java.awt.Color(0, 0, 0));
         passLabel.setText("CONTRASEÑA");
 
-        passTxt.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
-        passTxt.setText("********");
+        passTxt.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        passTxt.setForeground(new java.awt.Color(0, 0, 0));
         passTxt.setToolTipText("");
         passTxt.setBorder(null);
         passTxt.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -296,15 +298,7 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void userTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userTxtMousePressed
-       if (userTxt.getText().equals("Ingrese su nombre de usuario")) {
-        userTxt.setText("");
-        userTxt.setForeground(Color.BLACK);
-    }
-
-    if (String.valueOf(passTxt.getPassword()).isEmpty()) {
-        passTxt.setText("********");
-        passTxt.setForeground(Color.GRAY);
-    }
+    
     }//GEN-LAST:event_userTxtMousePressed
 
     private void userTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userTxtActionPerformed
@@ -312,15 +306,7 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_userTxtActionPerformed
 
     private void passTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passTxtMousePressed
-        if (String.valueOf(passTxt.getPassword()).equals("********")) {
-        passTxt.setText("");
-        passTxt.setForeground(Color.BLACK);
-    }
-
-    if (userTxt.getText().isEmpty()) {
-        userTxt.setText("Ingrese su nombre de usuario");
-        userTxt.setForeground(Color.GRAY);
-    }
+   
     }//GEN-LAST:event_passTxtMousePressed
 
     private void IngresarBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseClicked
