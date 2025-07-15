@@ -387,7 +387,7 @@ public class editarUsuario extends javax.swing.JFrame {
 
     private void IngresarBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresarBtnTxtMouseClicked
         String usuario = userTxt.getText();
-        String contra = passTxtAntiguo.getText();
+        String contra = passTxt.getText();
         String rol = (String) rolCmb.getSelectedItem();
         
         control.editarUsuario(user,usuario,contra,rol);
