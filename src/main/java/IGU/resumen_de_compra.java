@@ -16,13 +16,14 @@ import logica.controladoraLogicaLogin;
  * @author Valentino
  */
 public class resumen_de_compra extends javax.swing.JFrame {
-
+    int xMouse, yMouse;
     private CarritoDeCompras carrito = CarritoGlobal.getCarrito();
     controladoraLogicaLogin control;
     Usuario user;
 
     public resumen_de_compra(controladoraLogicaLogin control, Usuario user) {
         initComponents();
+        this.setSize(900, 550);
         this.control = control;
         this.user = user;
         carrito.limpiarProductosInvalidos();
@@ -88,12 +89,13 @@ public class resumen_de_compra extends javax.swing.JFrame {
         scrolltxtresumen_compra = new javax.swing.JScrollPane();
         txtresumen_compra = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
-        exitBtn = new javax.swing.JPanel();
-        exitBtnTxt = new javax.swing.JLabel();
         labelResumenDeCompra = new javax.swing.JLabel();
         volverbutton = new javax.swing.JPanel();
-        volverbuttontxt = new javax.swing.JLabel();
         btnCompra = new javax.swing.JButton();
+        header1 = new javax.swing.JPanel();
+        exitBtn = new javax.swing.JPanel();
+        exitBtnTxt = new javax.swing.JLabel();
+        volverbuttontxt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -117,6 +119,37 @@ public class resumen_de_compra extends javax.swing.JFrame {
 
         background.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 880, 320));
         background.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 50, -1, -1));
+
+        labelResumenDeCompra.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
+        labelResumenDeCompra.setForeground(new java.awt.Color(0, 0, 0));
+        labelResumenDeCompra.setText("RESUMEN DE TU COMPRA");
+        background.add(labelResumenDeCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
+
+        volverbutton.setBackground(new java.awt.Color(0, 153, 204));
+        volverbutton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        background.add(volverbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
+
+        btnCompra.setFont(new java.awt.Font("Ebrima", 0, 18)); // NOI18N
+        btnCompra.setForeground(new java.awt.Color(0, 0, 0));
+        btnCompra.setText("COMPLETAR COMPRA");
+        btnCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCompraActionPerformed(evt);
+            }
+        });
+        background.add(btnCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 230, 70));
+
+        header1.setBackground(new java.awt.Color(0, 153, 204));
+        header1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                header1MouseDragged(evt);
+            }
+        });
+        header1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                header1MousePressed(evt);
+            }
+        });
 
         exitBtn.setBackground(new java.awt.Color(0, 153, 204));
 
@@ -143,25 +176,28 @@ public class resumen_de_compra extends javax.swing.JFrame {
         exitBtnLayout.setHorizontalGroup(
             exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitBtnLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 12, Short.MAX_VALUE)
                 .addComponent(exitBtnTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         exitBtnLayout.setVerticalGroup(
             exitBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(exitBtnLayout.createSequentialGroup()
-                .addComponent(exitBtnTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(exitBtnTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, Short.MAX_VALUE)
         );
 
-        background.add(exitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 0, -1, 40));
+        javax.swing.GroupLayout header1Layout = new javax.swing.GroupLayout(header1);
+        header1.setLayout(header1Layout);
+        header1Layout.setHorizontalGroup(
+            header1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, header1Layout.createSequentialGroup()
+                .addGap(0, 848, Short.MAX_VALUE)
+                .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        header1Layout.setVerticalGroup(
+            header1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(exitBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
-        labelResumenDeCompra.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
-        labelResumenDeCompra.setForeground(new java.awt.Color(0, 0, 0));
-        labelResumenDeCompra.setText("RESUMEN DE TU COMPRA");
-        background.add(labelResumenDeCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
-
-        volverbutton.setBackground(new java.awt.Color(0, 153, 204));
-        volverbutton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        background.add(header1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
 
         volverbuttontxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -174,19 +210,7 @@ public class resumen_de_compra extends javax.swing.JFrame {
                 volverbuttontxtMouseExited(evt);
             }
         });
-        volverbutton.add(volverbuttontxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
-
-        background.add(volverbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
-
-        btnCompra.setFont(new java.awt.Font("Ebrima", 0, 18)); // NOI18N
-        btnCompra.setForeground(new java.awt.Color(0, 0, 0));
-        btnCompra.setText("COMPLETAR COMPRA");
-        btnCompra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCompraActionPerformed(evt);
-            }
-        });
-        background.add(btnCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 230, 70));
+        background.add(volverbuttontxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -241,11 +265,23 @@ public class resumen_de_compra extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnCompraActionPerformed
 
+    private void header1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header1MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x-xMouse,y- yMouse);
+    }//GEN-LAST:event_header1MouseDragged
+
+    private void header1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header1MousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_header1MousePressed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JButton btnCompra;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
+    private javax.swing.JPanel header1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;

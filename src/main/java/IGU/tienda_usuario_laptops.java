@@ -125,7 +125,7 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         btncategorialaptops.setForeground(new java.awt.Color(0, 0, 0));
         btncategorialaptops.setText("LAPTOPS");
 
-        labelTienda.setFont(new java.awt.Font("Ebrima", 1, 36)); // NOI18N
+        labelTienda.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         labelTienda.setText("TIENDA");
 
         btncategoriacelulares.setFont(new java.awt.Font("Ebrima", 0, 24)); // NOI18N
@@ -145,7 +145,7 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
             .addGroup(panelTiendaLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(labelTienda)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
             .addGroup(panelTiendaLayout.createSequentialGroup()
                 .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -166,7 +166,7 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
 
         jPanel1.add(panelTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 550));
 
-        btnCompletarCompraTienda.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnCompletarCompraTienda.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         btnCompletarCompraTienda.setForeground(new java.awt.Color(0, 0, 0));
         btnCompletarCompraTienda.setText("COMPLETAR COMPRA");
         btnCompletarCompraTienda.setFocusPainted(false);
@@ -177,7 +177,7 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         });
         jPanel1.add(btnCompletarCompraTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, 250, 60));
 
-        labelLaptops.setFont(new java.awt.Font("Ebrima", 1, 48)); // NOI18N
+        labelLaptops.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
         labelLaptops.setForeground(new java.awt.Color(0, 0, 0));
         labelLaptops.setText("LAPTOPS");
         jPanel1.add(labelLaptops, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, -1, -1));
@@ -190,12 +190,12 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelRound1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("LAPTOP LENOVO");
         panelRound1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("S/ 2900");
         panelRound1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
@@ -222,12 +222,12 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelRound2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("LAPTOP HP");
         panelRound2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 100, -1));
 
-        jLabel10.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("S/ 3090");
         panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
@@ -253,12 +253,12 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         panelRound3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelRound3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("LAPTOP GAYMER");
         panelRound3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("S/ 4500");
         panelRound3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
@@ -271,7 +271,7 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         });
         panelRound3.add(btnaniadirvictus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
 
-        jLabel12.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("VICTUS");
         panelRound3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));

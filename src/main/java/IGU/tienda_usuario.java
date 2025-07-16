@@ -122,7 +122,7 @@ public class tienda_usuario extends javax.swing.JFrame {
         });
         volverbutton.add(volverbuttontxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
-        btncategorialaptops.setFont(new java.awt.Font("Ebrima", 0, 24)); // NOI18N
+        btncategorialaptops.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         btncategorialaptops.setForeground(new java.awt.Color(0, 0, 0));
         btncategorialaptops.setText("LAPTOPS");
         btncategorialaptops.addActionListener(new java.awt.event.ActionListener() {
@@ -131,10 +131,10 @@ public class tienda_usuario extends javax.swing.JFrame {
             }
         });
 
-        labelTienda.setFont(new java.awt.Font("Ebrima", 1, 36)); // NOI18N
+        labelTienda.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         labelTienda.setText("TIENDA");
 
-        btncategoriacelulares.setFont(new java.awt.Font("Ebrima", 0, 24)); // NOI18N
+        btncategoriacelulares.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         btncategoriacelulares.setForeground(new java.awt.Color(0, 0, 0));
         btncategoriacelulares.setText("CELULARES");
 
@@ -146,7 +146,7 @@ public class tienda_usuario extends javax.swing.JFrame {
             .addGroup(paneltiendaLayout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(labelTienda)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
             .addGroup(paneltiendaLayout.createSequentialGroup()
                 .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -167,7 +167,7 @@ public class tienda_usuario extends javax.swing.JFrame {
 
         background.add(paneltienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 550));
 
-        btnCompletarCompraTienda.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnCompletarCompraTienda.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         btnCompletarCompraTienda.setForeground(new java.awt.Color(0, 0, 0));
         btnCompletarCompraTienda.setText("COMPLETAR COMPRA");
         btnCompletarCompraTienda.setFocusPainted(false);
@@ -178,7 +178,7 @@ public class tienda_usuario extends javax.swing.JFrame {
         });
         background.add(btnCompletarCompraTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, 250, 60));
 
-        labelCelulares.setFont(new java.awt.Font("Ebrima", 1, 48)); // NOI18N
+        labelCelulares.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
         labelCelulares.setForeground(new java.awt.Color(0, 0, 0));
         labelCelulares.setText("CELULARES");
         background.add(labelCelulares, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
@@ -191,16 +191,17 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelRound1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("IPHONE 15 PRO");
         panelRound1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("S/ 3800");
         panelRound1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
+        btnaniadir15pro.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         btnaniadir15pro.setText("Añadir");
         btnaniadir15pro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,16 +224,17 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelRound2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 120));
 
-        jLabel8.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("IPHONE 15 PRO");
         panelRound2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 140, -1));
 
-        jLabel10.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("S/ 4000 ");
         panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
+        btnaniadir15promax.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         btnaniadir15promax.setText("Añadir");
         btnaniadir15promax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,7 +243,7 @@ public class tienda_usuario extends javax.swing.JFrame {
         });
         panelRound2.add(btnaniadir15promax, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
 
-        jLabel13.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("MAX");
         panelRound2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
@@ -259,16 +261,17 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         panelRound3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("IPHONE 16 PRO");
         panelRound3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("S/ 4500");
         panelRound3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
+        btnaniadir16.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         btnaniadir16.setText("Añadir");
         btnaniadir16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,7 +280,7 @@ public class tienda_usuario extends javax.swing.JFrame {
         });
         panelRound3.add(btnaniadir16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
 
-        jLabel12.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("MAX");
         panelRound3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
