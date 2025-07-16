@@ -59,7 +59,7 @@ public class login extends javax.swing.JFrame {
 
         panelPrincipal.setBackground(new java.awt.Color(30, 41, 59));
 
-        logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\logo\\logo_temporal.png")); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo/logo_temporal.png"))); // NOI18N
 
         message01.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         message01.setForeground(new java.awt.Color(255, 255, 255));
