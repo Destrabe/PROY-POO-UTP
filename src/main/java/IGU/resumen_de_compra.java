@@ -1,4 +1,3 @@
-
 package IGU;
 
 import java.awt.Color;
@@ -17,70 +16,68 @@ import logica.controladoraLogicaLogin;
  * @author Valentino
  */
 public class resumen_de_compra extends javax.swing.JFrame {
-    private CarritoDeCompras carrito= CarritoGlobal.getCarrito();
+
+    private CarritoDeCompras carrito = CarritoGlobal.getCarrito();
     controladoraLogicaLogin control;
     Usuario user;
-    
-    public resumen_de_compra(controladoraLogicaLogin control,Usuario user) {
+
+    public resumen_de_compra(controladoraLogicaLogin control, Usuario user) {
         initComponents();
         this.control = control;
         this.user = user;
         carrito.limpiarProductosInvalidos();
-        List<Compra> comprasActuales= carrito.generarComprasSimuladas();
-        mostrarResumen(comprasActuales); 
+        List<Compra> comprasActuales = carrito.generarComprasSimuladas();
+        mostrarResumen(comprasActuales);
         scrolltxtresumen_compra.setBorder(null);
         txtresumen_compra.setBorder(BorderFactory.createEmptyBorder());
         URL imgURL = getClass().getResource("/imagenes/icono.png");
-if (imgURL != null) {
-    ImageIcon icon = new ImageIcon(imgURL);
-    jLabel2.setIcon(icon);
-} else {
-    System.err.println("No se encontró la imagen: /imagenes/icono.png");
-}
+        if (imgURL != null) {
+            ImageIcon icon = new ImageIcon(imgURL);
+            jLabel2.setIcon(icon);
+        } else {
+            System.err.println("No se encontró la imagen: /imagenes/icono.png");
+        }
 
     }
-    
-    
-    public void mostrarResumen(List<Compra> compras){
-        double totalGeneral=0.0;
-        StringBuilder resumen= new StringBuilder();
-        
-        Map<String, Integer> conteo= new LinkedHashMap<>();
-        Map<String, Double> precioUnitario= new LinkedHashMap<>();        
-        
+
+    public void mostrarResumen(List<Compra> compras) {
+        double totalGeneral = 0.0;
+        StringBuilder resumen = new StringBuilder();
+
+        Map<String, Integer> conteo = new LinkedHashMap<>();
+        Map<String, Double> precioUnitario = new LinkedHashMap<>();
+
         for (Compra c : compras) {
-            String nombre= c.getNombreproducto();
-            int cantidad= c.getCantidad();
-            double precio= c.getPrecioproducto();
-            
+            String nombre = c.getNombreproducto();
+            int cantidad = c.getCantidad();
+            double precio = c.getPrecioproducto();
+
             if (nombre == null || nombre.trim().isEmpty() || cantidad <= 0 || precio <= 0.0) {
                 continue;
             }
-            
-            conteo.put(nombre, conteo.getOrDefault(nombre, 0)+cantidad);
+
+            conteo.put(nombre, conteo.getOrDefault(nombre, 0) + cantidad);
             precioUnitario.put(nombre, precio);
         }
-        
-        
+
         for (String nombre : conteo.keySet()) {
-            int cantidad= conteo.get(nombre);
+            int cantidad = conteo.get(nombre);
             double precio = precioUnitario.get(nombre);
-            double subtotal = cantidad*precio;
-            
+            double subtotal = cantidad * precio;
             resumen.append("Producto: ").append(nombre).append("\n");
             resumen.append("Cantidad: ").append(cantidad).append("\n");
             resumen.append("Precio unitario: S/ ").append(String.format("%.2f", precio)).append("\n");
             resumen.append("Subtotal: S/ ").append(String.format("%.2f", subtotal)).append("\n");
             resumen.append("__________________________________________________________\n");
-            
-            totalGeneral+= subtotal;
+
+            totalGeneral += subtotal;
         }
-        
+
         resumen.append("TOTAL A PAGAR: S/ ").append(String.format("%.2f", totalGeneral));
-        
+
         txtresumen_compra.setText(resumen.toString());
     }
-  
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -93,7 +90,7 @@ if (imgURL != null) {
         jLabel4 = new javax.swing.JLabel();
         exitBtn = new javax.swing.JPanel();
         exitBtnTxt = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        labelResumenDeCompra = new javax.swing.JLabel();
         volverbutton = new javax.swing.JPanel();
         volverbuttontxt = new javax.swing.JLabel();
         btnCompra = new javax.swing.JButton();
@@ -104,8 +101,6 @@ if (imgURL != null) {
 
         background.setBackground(new java.awt.Color(0, 153, 204));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\laptop.png")); // NOI18N
         background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 204));
@@ -114,14 +109,13 @@ if (imgURL != null) {
 
         txtresumen_compra.setBackground(new java.awt.Color(0, 153, 204));
         txtresumen_compra.setColumns(20);
+        txtresumen_compra.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
         txtresumen_compra.setRows(5);
         scrolltxtresumen_compra.setViewportView(txtresumen_compra);
 
         jPanel1.add(scrolltxtresumen_compra, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 4, 870, 310));
 
         background.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 880, 320));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\laptop.png")); // NOI18N
         background.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 50, -1, -1));
 
         exitBtn.setBackground(new java.awt.Color(0, 153, 204));
@@ -161,15 +155,14 @@ if (imgURL != null) {
 
         background.add(exitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 0, -1, 40));
 
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("RESUMEN DE TU COMPRA");
-        background.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
+        labelResumenDeCompra.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        labelResumenDeCompra.setForeground(new java.awt.Color(0, 0, 0));
+        labelResumenDeCompra.setText("RESUMEN DE TU COMPRA");
+        background.add(labelResumenDeCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
 
         volverbutton.setBackground(new java.awt.Color(0, 153, 204));
         volverbutton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        volverbuttontxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\volver.png")); // NOI18N
         volverbuttontxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverbuttontxtMouseClicked(evt);
@@ -215,34 +208,34 @@ if (imgURL != null) {
     }//GEN-LAST:event_exitBtnTxtMouseClicked
 
     private void exitBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseEntered
-        exitBtn.setBackground(new Color(232,17,35,255));
+        exitBtn.setBackground(new Color(232, 17, 35, 255));
         exitBtnTxt.setForeground(Color.white);
     }//GEN-LAST:event_exitBtnTxtMouseEntered
 
     private void exitBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseExited
-        exitBtn.setBackground(new Color(0,153,204));
+        exitBtn.setBackground(new Color(0, 153, 204));
         exitBtnTxt.setForeground(Color.black);
     }//GEN-LAST:event_exitBtnTxtMouseExited
 
     private void volverbuttontxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseEntered
-        volverbutton.setBackground(new Color(232,17,35,255));
+        volverbutton.setBackground(new Color(232, 17, 35, 255));
         volverbuttontxt.setForeground(Color.white);
     }//GEN-LAST:event_volverbuttontxtMouseEntered
 
     private void volverbuttontxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseExited
-        volverbutton.setBackground(new Color(0,153,204));
+        volverbutton.setBackground(new Color(0, 153, 204));
         volverbuttontxt.setForeground(Color.black);
     }//GEN-LAST:event_volverbuttontxtMouseExited
 
     private void volverbuttontxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseClicked
-        tienda_usuario volver= new tienda_usuario(control,user);
+        tienda_usuario volver = new tienda_usuario(control, user);
         volver.setVisible(true);
         volver.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_volverbuttontxtMouseClicked
 
     private void btnCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompraActionPerformed
-        venta_final ventaFinal= new venta_final(control,user);
+        venta_final ventaFinal = new venta_final(control, user);
         ventaFinal.setVisible(true);
         ventaFinal.setLocationRelativeTo(null);
         this.dispose();
@@ -255,8 +248,8 @@ if (imgURL != null) {
     private javax.swing.JLabel exitBtnTxt;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelResumenDeCompra;
     private javax.swing.JScrollPane scrolltxtresumen_compra;
     private javax.swing.JTextArea txtresumen_compra;
     private javax.swing.JPanel volverbutton;

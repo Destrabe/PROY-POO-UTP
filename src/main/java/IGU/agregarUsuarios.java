@@ -74,7 +74,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
 
         principal.setBackground(new java.awt.Color(30, 41, 59));
 
-        logo.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\logo\\logo_temporal.png")); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
 
         texto01.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         texto01.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,28 +126,28 @@ public class agregarUsuarios extends javax.swing.JFrame {
             principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(texto01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(texto03, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(texto02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
-                .addComponent(logo)
-                .addGap(105, 105, 105))
+            .addComponent(texto02, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(logo)
+                .addGap(104, 104, 104))
         );
         principalLayout.setVerticalGroup(
             principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(principalLayout.createSequentialGroup()
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
+                .addGap(47, 47, 47)
                 .addComponent(logo)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(texto01)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(texto02)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(texto03)
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         background.add(principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 360, 550));
@@ -294,7 +294,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
 
         volverBtnTxt.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         volverBtnTxt.setForeground(new java.awt.Color(255, 255, 255));
-        volverBtnTxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\Icons\\backIcon.png")); // NOI18N
+        volverBtnTxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/backIcon.png"))); // NOI18N
         volverBtnTxt.setText("Volver");
         volverBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

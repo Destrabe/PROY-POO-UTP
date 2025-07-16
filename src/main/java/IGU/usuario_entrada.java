@@ -39,7 +39,7 @@ public class usuario_entrada extends javax.swing.JFrame {
         btnProductos = new javax.swing.JButton();
         btnverCompras = new javax.swing.JButton();
         sistemadeventasusuariolabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
         btnverCompras1 = new javax.swing.JButton();
 
         checkbox1.setLabel("checkbox1");
@@ -115,8 +115,8 @@ public class usuario_entrada extends javax.swing.JFrame {
         sistemadeventasusuariolabel.setText("SISTEMA DE VENTAS");
         background.add(sistemadeventasusuariolabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\logo\\logo_temporal.png")); // NOI18N
-        background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, 150, 160));
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
+        background.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, 150, 160));
 
         btnverCompras1.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         btnverCompras1.setText("Ver Compras");
@@ -188,7 +188,7 @@ public class usuario_entrada extends javax.swing.JFrame {
     private java.awt.Checkbox checkbox1;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel logo;
     private javax.swing.JLabel sistemadeventasusuariolabel;
     // End of variables declaration//GEN-END:variables
 }

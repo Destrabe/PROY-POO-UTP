@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 import logica.CarritoDeCompras;
 import logica.CarritoGlobal;
 import logica.Compra;
+import logica.SesionDeCompra;
 import logica.Usuario;
 import logica.controladoraLogicaLogin;
 import persistencia.CompraJpaController;
@@ -25,6 +26,14 @@ public class registrar_datos extends javax.swing.JFrame {
 
     public registrar_datos(CarritoDeCompras carrito,controladoraLogicaLogin control, Usuario user) {
         initComponents();
+        if (SesionDeCompra.getNombres()!= null) {
+            txtNombres.setText(SesionDeCompra.getNombres());
+            txtApellidos.setText(SesionDeCompra.getApellidos());
+            txtDNI.setText(SesionDeCompra.getDni());
+            txtDireccion.setText(SesionDeCompra.getDireccion());
+            txtTelefono.setText(SesionDeCompra.getTelefono());
+            txtEmail.setText(SesionDeCompra.getEmail());
+        }
         this.carrito = carrito;
         this.control = control;
         this.user = user;
@@ -37,8 +46,8 @@ public class registrar_datos extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         volverbutton = new javax.swing.JPanel();
         volverbuttontxt = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
+        labelRegistrarDatos = new javax.swing.JLabel();
         labelNombres = new javax.swing.JLabel();
         labelApellidos = new javax.swing.JLabel();
         labelDNI = new javax.swing.JLabel();
@@ -64,7 +73,6 @@ public class registrar_datos extends javax.swing.JFrame {
         volverbutton.setBackground(new java.awt.Color(255, 255, 255));
         volverbutton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        volverbuttontxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\volver.png")); // NOI18N
         volverbuttontxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverbuttontxtMouseClicked(evt);
@@ -80,13 +88,13 @@ public class registrar_datos extends javax.swing.JFrame {
 
         jPanel1.add(volverbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\logo\\logo_temporal.png")); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 190, -1, -1));
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 220, 150, 150));
 
-        jLabel2.setFont(new java.awt.Font("Ebrima", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("REGISTRAR DATOS");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, -1, -1));
+        labelRegistrarDatos.setFont(new java.awt.Font("Ebrima", 1, 36)); // NOI18N
+        labelRegistrarDatos.setForeground(new java.awt.Color(0, 0, 0));
+        labelRegistrarDatos.setText("REGISTRAR DATOS");
+        jPanel1.add(labelRegistrarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, -1, -1));
 
         labelNombres.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         labelNombres.setForeground(new java.awt.Color(0, 0, 0));
@@ -122,7 +130,6 @@ public class registrar_datos extends javax.swing.JFrame {
         jPanel1.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 400, 30));
 
         btnLimpiar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnLimpiar.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\limpiar.png")); // NOI18N
         btnLimpiar.setText("LIMPIAR");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +139,6 @@ public class registrar_datos extends javax.swing.JFrame {
         jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 450, 210, 80));
 
         btnGuardar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnGuardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\guardar.png")); // NOI18N
         btnGuardar.setText("GUARDAR");
         btnGuardar.setIconTextGap(8);
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
@@ -193,7 +199,16 @@ public class registrar_datos extends javax.swing.JFrame {
         String direccion = txtDireccion.getText();
         String telefono = txtTelefono.getText();
         String email = txtEmail.getText();
-
+        
+        //guardamos los datos en la sesion
+        SesionDeCompra.setNombres(nombres);
+        SesionDeCompra.setApellidos(apellidos);
+        SesionDeCompra.setDni(dni);
+        SesionDeCompra.setDireccion(direccion);
+        SesionDeCompra.setTelefono(telefono);
+        SesionDeCompra.setEmail(email);
+        
+        //validaciones basicas
         if (nombres.isEmpty() || dni.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Nombre y DNI son obligatorios");
             return;
@@ -202,7 +217,10 @@ public class registrar_datos extends javax.swing.JFrame {
         if (carrito == null || carrito.getProductos().isEmpty()) {
             JOptionPane.showMessageDialog(null, "El carrito esta vacio");
         }
-        carrito.limpiarProductosInvalidos();
+        
+        carrito.limpiarProductosInvalidos(); //limpia productos invalidos
+        
+        //Recorremos el carrito para registrar cada compra
         for (String p : carrito.getProductos().keySet()) {
             int cantidad = carrito.getCantidad(p);
             double precio = carrito.getPrecio(p);
@@ -225,6 +243,7 @@ public class registrar_datos extends javax.swing.JFrame {
                 continue;
             }
             
+            //creamos la compra
             if (cantidad>0 && precio>0.0){
             Compra compra = new Compra(
                     nombreProducto, 
@@ -237,6 +256,7 @@ public class registrar_datos extends javax.swing.JFrame {
                     email, 
                     cantidad
             );
+            //guardamos la compra
                 try {
                     new CompraJpaController().crear(compra);
                 } catch (Exception e) {
@@ -256,15 +276,15 @@ public class registrar_datos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnLimpiar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelApellidos;
     private javax.swing.JLabel labelDNI;
     private javax.swing.JLabel labelDireccion;
     private javax.swing.JLabel labelNombres;
     private javax.swing.JLabel labelReferencia;
+    private javax.swing.JLabel labelRegistrarDatos;
     private javax.swing.JLabel labelTelefono;
+    private javax.swing.JLabel logo;
     private javax.swing.JTextField txtApellidos;
     private javax.swing.JTextField txtDNI;
     private javax.swing.JTextField txtDireccion;

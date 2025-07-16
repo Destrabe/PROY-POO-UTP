@@ -64,7 +64,6 @@ public class ver_compras_realizadas extends javax.swing.JFrame {
         volverbutton.setBackground(new java.awt.Color(255, 255, 255));
         volverbutton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        volverbuttontxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\volver.png")); // NOI18N
         volverbuttontxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverbuttontxtMouseClicked(evt);
@@ -88,7 +87,7 @@ public class ver_compras_realizadas extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tablaComprasRealizadas);
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("COMPRAS REALIZADAS");
 
@@ -115,7 +114,7 @@ public class ver_compras_realizadas extends javax.swing.JFrame {
                 .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
