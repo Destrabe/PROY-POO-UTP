@@ -39,22 +39,6 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         btncategoriacelulares = new javax.swing.JButton();
         btnCompletarCompraTienda = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        panelRound1 = new components.PanelRound();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        btnaniadirlenovo = new javax.swing.JButton();
-        panelRound2 = new components.PanelRound();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        btnaniadirhp = new javax.swing.JButton();
-        panelRound3 = new components.PanelRound();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        btnaniadirvictus = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -105,7 +89,6 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         volverbutton.setBackground(new java.awt.Color(30, 41, 59));
         volverbutton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        volverbuttontxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\volver.png")); // NOI18N
         volverbuttontxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverbuttontxtMouseClicked(evt);
@@ -121,7 +104,6 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
 
         btncategorialaptops.setFont(new java.awt.Font("Ebrima", 0, 24)); // NOI18N
         btncategorialaptops.setForeground(new java.awt.Color(0, 0, 0));
-        btncategorialaptops.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\Laptop_pequeño.png")); // NOI18N
         btncategorialaptops.setText("LAPTOPS");
 
         jLabel1.setFont(new java.awt.Font("Ebrima", 1, 36)); // NOI18N
@@ -129,7 +111,6 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
 
         btncategoriacelulares.setFont(new java.awt.Font("Ebrima", 0, 24)); // NOI18N
         btncategoriacelulares.setForeground(new java.awt.Color(0, 0, 0));
-        btncategoriacelulares.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\Celular_pequeño.png")); // NOI18N
         btncategoriacelulares.setText("CELULARES");
         btncategoriacelulares.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,102 +162,6 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("LAPTOPS");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, -1, -1));
-
-        panelRound1.setBackground(new java.awt.Color(153, 153, 153));
-        panelRound1.setRoundBottomLeft(50);
-        panelRound1.setRoundBottomRight(50);
-        panelRound1.setRoundTopLeft(50);
-        panelRound1.setRoundTopRight(50);
-        panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\lenovo.png")); // NOI18N
-        panelRound1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("LAPTOP LENOVO");
-        panelRound1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("S/ 2900");
-        panelRound1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
-
-        btnaniadirlenovo.setText("Añadir");
-        btnaniadirlenovo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaniadirlenovoActionPerformed(evt);
-            }
-        });
-        panelRound1.add(btnaniadirlenovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
-
-        jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 160, 270));
-
-        panelRound2.setBackground(new java.awt.Color(153, 153, 153));
-        panelRound2.setPreferredSize(new java.awt.Dimension(200, 270));
-        panelRound2.setRoundBottomLeft(50);
-        panelRound2.setRoundBottomRight(50);
-        panelRound2.setRoundTopLeft(50);
-        panelRound2.setRoundTopRight(50);
-        panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\hp.png")); // NOI18N
-        panelRound2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
-
-        jLabel8.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("LAPTOP HP");
-        panelRound2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 100, -1));
-
-        jLabel10.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("S/ 3090");
-        panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
-
-        btnaniadirhp.setText("Añadir");
-        btnaniadirhp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaniadirhpActionPerformed(evt);
-            }
-        });
-        panelRound2.add(btnaniadirhp, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
-
-        jPanel1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 160, -1));
-
-        panelRound3.setBackground(new java.awt.Color(153, 153, 153));
-        panelRound3.setRoundBottomLeft(50);
-        panelRound3.setRoundBottomRight(50);
-        panelRound3.setRoundTopLeft(50);
-        panelRound3.setRoundTopRight(50);
-        panelRound3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\victus.png")); // NOI18N
-        panelRound3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
-
-        jLabel9.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("LAPTOP GAYMER");
-        panelRound3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
-
-        jLabel11.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("S/ 4500");
-        panelRound3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
-
-        btnaniadirvictus.setText("Añadir");
-        btnaniadirvictus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaniadirvictusActionPerformed(evt);
-            }
-        });
-        panelRound3.add(btnaniadirvictus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
-
-        jLabel12.setFont(new java.awt.Font("Ebrima", 1, 17)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setText("VICTUS");
-        panelRound3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
-
-        jPanel1.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 140, 160, 270));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -338,44 +223,16 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btncategoriacelularesActionPerformed
 
-    private void btnaniadirlenovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadirlenovoActionPerformed
-        carrito.agregarProducto("LAPTOP LENOVO", 2900);
-    }//GEN-LAST:event_btnaniadirlenovoActionPerformed
-
-    private void btnaniadirhpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadirhpActionPerformed
-        carrito.agregarProducto("LAPTOP HP", 3090);
-    }//GEN-LAST:event_btnaniadirhpActionPerformed
-
-    private void btnaniadirvictusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadirvictusActionPerformed
-        carrito.agregarProducto("LAPTOP VICTUS", 4500);
-    }//GEN-LAST:event_btnaniadirvictusActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCompletarCompraTienda;
-    private javax.swing.JButton btnaniadirhp;
-    private javax.swing.JButton btnaniadirlenovo;
-    private javax.swing.JButton btnaniadirvictus;
     private javax.swing.JButton btncategoriacelulares;
     private javax.swing.JButton btncategorialaptops;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private components.PanelRound panelRound1;
-    private components.PanelRound panelRound2;
-    private components.PanelRound panelRound3;
     private javax.swing.JPanel volverbutton;
     private javax.swing.JLabel volverbuttontxt;
     // End of variables declaration//GEN-END:variables

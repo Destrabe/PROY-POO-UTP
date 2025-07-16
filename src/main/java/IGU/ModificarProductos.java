@@ -26,22 +26,229 @@ public class ModificarProductos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        exitBtnTxt2 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txtNombres = new javax.swing.JTextField();
+        txtApellidos = new javax.swing.JTextField();
+        txtDNI = new javax.swing.JTextField();
+        txtDireccion = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        btnGuardar = new javax.swing.JButton();
+        labelTelefono = new javax.swing.JLabel();
+        labelDireccion = new javax.swing.JLabel();
+        labelDNI = new javax.swing.JLabel();
+        labelApellidos = new javax.swing.JLabel();
+        labelNombres = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        exitBtnTxt3 = new javax.swing.JLabel();
+
+        exitBtnTxt2.setBackground(new java.awt.Color(0, 0, 0));
+        exitBtnTxt2.setFont(new java.awt.Font("Dubai Light", 1, 30)); // NOI18N
+        exitBtnTxt2.setForeground(new java.awt.Color(0, 0, 0));
+        exitBtnTxt2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitBtnTxt2.setText("X");
+        exitBtnTxt2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        exitBtnTxt2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitBtnTxt2MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitBtnTxt2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitBtnTxt2MouseExited(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setMaximumSize(new java.awt.Dimension(900, 500));
+        jPanel3.setMinimumSize(new java.awt.Dimension(900, 500));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("EDITAR PRODUCTO");
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, -1, -1));
+        jPanel3.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 400, 30));
+        jPanel3.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 400, 30));
+        jPanel3.add(txtDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 400, 30));
+        jPanel3.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 400, 30));
+        jPanel3.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 400, 30));
+
+        btnGuardar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guardar.png"))); // NOI18N
+        btnGuardar.setText("GUARDAR");
+        btnGuardar.setIconTextGap(8);
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 210, 80));
+
+        labelTelefono.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        labelTelefono.setForeground(new java.awt.Color(0, 0, 0));
+        labelTelefono.setText("CGO. PRODUCTO:");
+        jPanel3.add(labelTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, -1));
+
+        labelDireccion.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        labelDireccion.setForeground(new java.awt.Color(0, 0, 0));
+        labelDireccion.setText("CATEGORIA:");
+        jPanel3.add(labelDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, -1, -1));
+
+        labelDNI.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        labelDNI.setForeground(new java.awt.Color(0, 0, 0));
+        labelDNI.setText("PRECIO:");
+        jPanel3.add(labelDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, -1, -1));
+
+        labelApellidos.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        labelApellidos.setForeground(new java.awt.Color(0, 0, 0));
+        labelApellidos.setText("STOCK:");
+        jPanel3.add(labelApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, -1, -1));
+
+        labelNombres.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        labelNombres.setForeground(new java.awt.Color(0, 0, 0));
+        labelNombres.setText("PRODUCTO:");
+        jPanel3.add(labelNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/volver.png"))); // NOI18N
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, -1, -1));
+
+        exitBtnTxt3.setBackground(new java.awt.Color(0, 0, 0));
+        exitBtnTxt3.setFont(new java.awt.Font("Dubai Light", 1, 30)); // NOI18N
+        exitBtnTxt3.setForeground(new java.awt.Color(0, 0, 0));
+        exitBtnTxt3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitBtnTxt3.setText("X");
+        exitBtnTxt3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        exitBtnTxt3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitBtnTxt3MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitBtnTxt3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitBtnTxt3MouseExited(evt);
+            }
+        });
+        jPanel3.add(exitBtnTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 900, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        String nombres = txtNombres.getText();
+        String apellidos = txtApellidos.getText();
+        String dni = txtDNI.getText();
+        String direccion = txtDireccion.getText();
+        String telefono = txtTelefono.getText();
+        String email = txtEmail.getText();
+
+        if (nombres.isEmpty() || dni.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nombre y DNI son obligatorios");
+            return;
+        }
+
+        if (carrito == null || carrito.getProductos().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "El carrito esta vacio");
+        }
+        carrito.limpiarProductosInvalidos();
+        for (String p : carrito.getProductos().keySet()) {
+            int cantidad = carrito.getCantidad(p);
+            double precio = carrito.getPrecio(p);
+            System.out.println(p + " - Cantidad: " + cantidad + " - Precio: " + precio);
+        }
+
+        for (String nombreProducto : carrito.getProductos().keySet()) {
+            int cantidad = carrito.getCantidad(nombreProducto);
+            double precio = carrito.getPrecio(nombreProducto);
+
+            System.out.println("Validando: " + nombreProducto + " | Cantidad: "+ cantidad + " | Precio: "+precio);
+
+            if (nombreProducto == null || nombreProducto.trim().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Se encontro un producto sin nombre. Compra no registrada");
+                continue;
+            }
+
+            if (cantidad<= 0 || precio <= 0.0) {
+                JOptionPane.showMessageDialog(null, "Producto con cantidad o precio invalido: " + nombreProducto);
+                continue;
+            }
+
+            if (cantidad>0 && precio>0.0){
+                Compra compra = new Compra(
+                    nombreProducto,
+                    precio,
+                    nombres,
+                    apellidos,
+                    dni,
+                    direccion,
+                    telefono,
+                    email,
+                    cantidad
+                );
+                try {
+                    new CompraJpaController().crear(compra);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Error al guardar: "+e.getMessage());
+                }
+            }
+        }
+        carrito.limpiarProductosInvalidos();
+        resumen_de_compra resumen = new resumen_de_compra(control,user);
+        resumen.setVisible(true);
+        resumen.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void exitBtnTxt2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxt2MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exitBtnTxt2MouseClicked
+
+    private void exitBtnTxt2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxt2MouseEntered
+        exitBtn.setBackground(new Color(232, 17, 35, 255));
+        exitBtnTxt.setForeground(Color.white);
+    }//GEN-LAST:event_exitBtnTxt2MouseEntered
+
+    private void exitBtnTxt2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxt2MouseExited
+        exitBtn.setBackground(Color.white);
+        exitBtnTxt.setForeground(Color.black);
+    }//GEN-LAST:event_exitBtnTxt2MouseExited
+
+    private void exitBtnTxt3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxt3MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exitBtnTxt3MouseClicked
+
+    private void exitBtnTxt3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxt3MouseEntered
+        exitBtn.setBackground(new Color(232, 17, 35, 255));
+        exitBtnTxt.setForeground(Color.white);
+    }//GEN-LAST:event_exitBtnTxt3MouseEntered
+
+    private void exitBtnTxt3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxt3MouseExited
+        exitBtn.setBackground(Color.white);
+        exitBtnTxt.setForeground(Color.black);
+    }//GEN-LAST:event_exitBtnTxt3MouseExited
 
     /**
      * @param args the command line arguments
@@ -79,5 +286,60 @@ public class ModificarProductos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.netbeans.modules.form.InvalidComponent IngresarBtn;
+    private org.netbeans.modules.form.InvalidComponent IngresarBtn1;
+    private javax.swing.JLabel IngresarBtnTxt;
+    private javax.swing.JLabel IngresarBtnTxt1;
+    private javax.swing.JPanel background;
+    private javax.swing.JPanel background1;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JPanel exitBtn;
+    private javax.swing.JPanel exitBtn1;
+    private javax.swing.JLabel exitBtnTxt;
+    private javax.swing.JLabel exitBtnTxt1;
+    private javax.swing.JLabel exitBtnTxt2;
+    private javax.swing.JLabel exitBtnTxt3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel labelApellidos;
+    private javax.swing.JLabel labelDNI;
+    private javax.swing.JLabel labelDireccion;
+    private javax.swing.JLabel labelNombres;
+    private javax.swing.JLabel labelTelefono;
+    private javax.swing.JLabel loginLabel;
+    private javax.swing.JLabel loginLabel1;
+    private javax.swing.JPanel loginPnl;
+    private javax.swing.JPanel loginPnl1;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel logo1;
+    private javax.swing.JLabel passLabel;
+    private javax.swing.JLabel passLabel1;
+    private javax.swing.JPasswordField passTxt;
+    private javax.swing.JPasswordField passTxt1;
+    private javax.swing.JPanel principal;
+    private javax.swing.JPanel principal1;
+    private javax.swing.JSeparator separatorPass;
+    private javax.swing.JSeparator separatorPass1;
+    private javax.swing.JSeparator separatorUsuario;
+    private javax.swing.JSeparator separatorUsuario1;
+    private javax.swing.JLabel texto01;
+    private javax.swing.JLabel texto02;
+    private javax.swing.JLabel texto03;
+    private javax.swing.JLabel texto2;
+    private javax.swing.JLabel texto3;
+    private javax.swing.JLabel texto4;
+    private javax.swing.JTextField txtApellidos;
+    private javax.swing.JTextField txtDNI;
+    private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtNombres;
+    private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField userTxt;
+    private javax.swing.JTextField userTxt1;
+    private javax.swing.JLabel usuarioLabel;
+    private javax.swing.JLabel usuarioLabel1;
     // End of variables declaration//GEN-END:variables
 }
