@@ -281,7 +281,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
                 .addComponent(rolCmb, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
                 .addComponent(IngresarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         background.add(loginPnl, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));

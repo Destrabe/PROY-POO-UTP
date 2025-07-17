@@ -45,8 +45,6 @@ public class registrar_datos extends javax.swing.JFrame {
     private void initComponents() {
 
         background = new javax.swing.JPanel();
-        volverbutton = new javax.swing.JPanel();
-        volverbuttontxt = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
         labelRegistrarDatos = new javax.swing.JLabel();
         labelNombres = new javax.swing.JLabel();
@@ -58,36 +56,24 @@ public class registrar_datos extends javax.swing.JFrame {
         txtDNI = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
         txtTelefono = new javax.swing.JTextField();
-        btnLimpiar = new javax.swing.JButton();
-        btnGuardar = new javax.swing.JButton();
         txtNombres = new javax.swing.JTextField();
         txtApellidos = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
         header1 = new javax.swing.JPanel();
         exitBtn = new javax.swing.JPanel();
         exitBtnTxt = new javax.swing.JLabel();
+        guardarbtn = new components.PanelRound();
+        guardarbtntxt = new javax.swing.JLabel();
+        limpiarbtn = new components.PanelRound();
+        limpiarbtntxt = new javax.swing.JLabel();
+        volverBtn = new components.PanelRound();
+        volverBtnTxt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
         background.setBackground(new java.awt.Color(255, 255, 255));
-
-        volverbutton.setBackground(new java.awt.Color(255, 255, 255));
-        volverbutton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        volverbuttontxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                volverbuttontxtMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                volverbuttontxtMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                volverbuttontxtMouseExited(evt);
-            }
-        });
-        volverbutton.add(volverbuttontxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
 
@@ -119,23 +105,6 @@ public class registrar_datos extends javax.swing.JFrame {
         labelReferencia.setForeground(new java.awt.Color(0, 0, 0));
         labelReferencia.setText("EMAIL:");
 
-        btnLimpiar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnLimpiar.setText("LIMPIAR");
-        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarActionPerformed(evt);
-            }
-        });
-
-        btnGuardar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnGuardar.setText("GUARDAR");
-        btnGuardar.setIconTextGap(8);
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
-            }
-        });
-
         header1.setBackground(new java.awt.Color(255, 255, 255));
         header1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -151,7 +120,7 @@ public class registrar_datos extends javax.swing.JFrame {
         exitBtn.setBackground(new java.awt.Color(255, 255, 255));
 
         exitBtnTxt.setBackground(new java.awt.Color(0, 0, 0));
-        exitBtnTxt.setFont(new java.awt.Font("Dubai Light", 1, 30)); // NOI18N
+        exitBtnTxt.setFont(new java.awt.Font("Dubai Light", 1, 20)); // NOI18N
         exitBtnTxt.setForeground(new java.awt.Color(0, 0, 0));
         exitBtnTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         exitBtnTxt.setText("X");
@@ -198,56 +167,164 @@ public class registrar_datos extends javax.swing.JFrame {
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        guardarbtn.setBackground(new java.awt.Color(45, 62, 85));
+        guardarbtn.setRoundBottomLeft(20);
+        guardarbtn.setRoundBottomRight(20);
+        guardarbtn.setRoundTopLeft(20);
+        guardarbtn.setRoundTopRight(20);
+
+        guardarbtntxt.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        guardarbtntxt.setForeground(new java.awt.Color(255, 255, 255));
+        guardarbtntxt.setText("      GUARDAR");
+        guardarbtntxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                guardarbtntxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                guardarbtntxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                guardarbtntxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout guardarbtnLayout = new javax.swing.GroupLayout(guardarbtn);
+        guardarbtn.setLayout(guardarbtnLayout);
+        guardarbtnLayout.setHorizontalGroup(
+            guardarbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(guardarbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+        );
+        guardarbtnLayout.setVerticalGroup(
+            guardarbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(guardarbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+        );
+
+        limpiarbtn.setBackground(new java.awt.Color(45, 62, 85));
+        limpiarbtn.setRoundBottomLeft(20);
+        limpiarbtn.setRoundBottomRight(20);
+        limpiarbtn.setRoundTopLeft(20);
+        limpiarbtn.setRoundTopRight(20);
+
+        limpiarbtntxt.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        limpiarbtntxt.setForeground(new java.awt.Color(255, 255, 255));
+        limpiarbtntxt.setText("        LIMPIAR");
+        limpiarbtntxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                limpiarbtntxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                limpiarbtntxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                limpiarbtntxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout limpiarbtnLayout = new javax.swing.GroupLayout(limpiarbtn);
+        limpiarbtn.setLayout(limpiarbtnLayout);
+        limpiarbtnLayout.setHorizontalGroup(
+            limpiarbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(limpiarbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+        );
+        limpiarbtnLayout.setVerticalGroup(
+            limpiarbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(limpiarbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+        );
+
+        volverBtn.setBackground(new java.awt.Color(30, 41, 59));
+        volverBtn.setRoundBottomLeft(25);
+        volverBtn.setRoundBottomRight(25);
+        volverBtn.setRoundTopLeft(25);
+        volverBtn.setRoundTopRight(25);
+
+        volverBtnTxt.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        volverBtnTxt.setForeground(new java.awt.Color(255, 255, 255));
+        volverBtnTxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/backIcon.png"))); // NOI18N
+        volverBtnTxt.setText("Volver");
+        volverBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                volverBtnTxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                volverBtnTxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                volverBtnTxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout volverBtnLayout = new javax.swing.GroupLayout(volverBtn);
+        volverBtn.setLayout(volverBtnLayout);
+        volverBtnLayout.setHorizontalGroup(
+            volverBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(volverBtnLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(volverBtnTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
+        );
+        volverBtnLayout.setVerticalGroup(
+            volverBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(volverBtnTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(290, 290, 290)
-                .addComponent(labelRegistrarDatos))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(labelNombres)
-                .addGap(14, 14, 14)
-                .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(100, 100, 100)
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelApellidos)
+                    .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(labelDNI))
-                    .addComponent(labelDireccion)
-                    .addComponent(labelTelefono))
-                .addGap(8, 8, 8)
-                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(80, 80, 80)
-                .addComponent(logo))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(labelReferencia)
-                .addGap(13, 13, 13)
-                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(100, 100, 100)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelApellidos)
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addGap(50, 50, 50)
+                                .addComponent(labelDNI))
+                            .addComponent(labelDireccion)
+                            .addComponent(labelTelefono))
+                        .addGap(8, 8, 8)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(80, 80, 80)
+                        .addComponent(logo))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(labelReferencia)
+                        .addGap(13, 13, 13)
+                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(labelNombres)
+                        .addGap(14, 14, 14)
+                        .addComponent(txtNombres, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addComponent(limpiarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(86, 86, 86)
+                                .addComponent(guardarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(backgroundLayout.createSequentialGroup()
+                                .addComponent(volverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(125, 125, 125)
+                                .addComponent(labelRegistrarDatos)))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addComponent(labelRegistrarDatos)
-                .addGap(93, 93, 93)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(labelRegistrarDatos))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(volverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(50, 50, 50)
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(backgroundLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
@@ -279,10 +356,11 @@ public class registrar_datos extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(labelReferencia))
                     .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(37, 37, 37)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(guardarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(limpiarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -300,33 +378,57 @@ public class registrar_datos extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void volverbuttontxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseClicked
-        resumen_de_compra resumenCompra = new resumen_de_compra(control,user);
-        resumenCompra.setVisible(true);
-        resumenCompra.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_volverbuttontxtMouseClicked
+    private void exitBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exitBtnTxtMouseClicked
 
-    private void volverbuttontxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseEntered
-        volverbutton.setBackground(new Color(232, 17, 35, 255));
-        volverbuttontxt.setForeground(Color.white);
-    }//GEN-LAST:event_volverbuttontxtMouseEntered
+    private void exitBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseEntered
+        exitBtn.setBackground(new Color(232, 17, 35, 255));
+        exitBtnTxt.setForeground(Color.white);
+    }//GEN-LAST:event_exitBtnTxtMouseEntered
 
-    private void volverbuttontxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverbuttontxtMouseExited
-        volverbutton.setBackground(Color.white);
-        volverbuttontxt.setForeground(Color.black);
-    }//GEN-LAST:event_volverbuttontxtMouseExited
+    private void exitBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseExited
+        exitBtn.setBackground(Color.white);
+        exitBtnTxt.setForeground(Color.black);
+    }//GEN-LAST:event_exitBtnTxtMouseExited
 
-    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+    private void header1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header1MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x-xMouse,y- yMouse);
+    }//GEN-LAST:event_header1MouseDragged
+
+    private void header1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header1MousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_header1MousePressed
+
+    private void limpiarbtntxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiarbtntxtMouseEntered
+        limpiarbtn.setBackground(new Color(70, 95, 125));
+    }//GEN-LAST:event_limpiarbtntxtMouseEntered
+
+    private void limpiarbtntxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiarbtntxtMouseExited
+        limpiarbtn.setBackground(new Color(45,62,85));
+    }//GEN-LAST:event_limpiarbtntxtMouseExited
+
+    private void limpiarbtntxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiarbtntxtMouseClicked
         txtApellidos.setText("");
         txtDNI.setText("");
         txtDireccion.setText("");
         txtEmail.setText("");
         txtNombres.setText("");
         txtTelefono.setText("");
-    }//GEN-LAST:event_btnLimpiarActionPerformed
+    }//GEN-LAST:event_limpiarbtntxtMouseClicked
 
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+    private void guardarbtntxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarbtntxtMouseEntered
+        guardarbtn.setBackground(new Color(70, 95, 125));
+    }//GEN-LAST:event_guardarbtntxtMouseEntered
+
+    private void guardarbtntxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarbtntxtMouseExited
+        guardarbtn.setBackground(new Color(45,62,85));
+    }//GEN-LAST:event_guardarbtntxtMouseExited
+
+    private void guardarbtntxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarbtntxtMouseClicked
         String nombres = txtNombres.getText();
         String apellidos = txtApellidos.getText();
         String dni = txtDNI.getText();
@@ -404,40 +506,30 @@ public class registrar_datos extends javax.swing.JFrame {
         resumen.setVisible(true);
         resumen.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnGuardarActionPerformed
+    }//GEN-LAST:event_guardarbtntxtMouseClicked
 
-    private void exitBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_exitBtnTxtMouseClicked
+    private void volverBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverBtnTxtMouseClicked
+        tienda_usuario ver=new tienda_usuario(control, user);
+        ver.setVisible(true);
+        ver.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_volverBtnTxtMouseClicked
 
-    private void exitBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseEntered
-        exitBtn.setBackground(new Color(232, 17, 35, 255));
-        exitBtnTxt.setForeground(Color.white);
-    }//GEN-LAST:event_exitBtnTxtMouseEntered
+    private void volverBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverBtnTxtMouseEntered
+        volverBtn.setBackground(new Color(70, 95, 125));
+    }//GEN-LAST:event_volverBtnTxtMouseEntered
 
-    private void exitBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseExited
-        exitBtn.setBackground(Color.white);
-        exitBtnTxt.setForeground(Color.black);
-    }//GEN-LAST:event_exitBtnTxtMouseExited
-
-    private void header1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header1MouseDragged
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x-xMouse,y- yMouse);
-    }//GEN-LAST:event_header1MouseDragged
-
-    private void header1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_header1MousePressed
-        xMouse = evt.getX();
-        yMouse = evt.getY();
-    }//GEN-LAST:event_header1MousePressed
+    private void volverBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverBtnTxtMouseExited
+        volverBtn.setBackground(new Color(70, 95, 125));
+    }//GEN-LAST:event_volverBtnTxtMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
-    private javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnLimpiar;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
+    private components.PanelRound guardarbtn;
+    private javax.swing.JLabel guardarbtntxt;
     private javax.swing.JPanel header1;
     private javax.swing.JLabel labelApellidos;
     private javax.swing.JLabel labelDNI;
@@ -446,6 +538,8 @@ public class registrar_datos extends javax.swing.JFrame {
     private javax.swing.JLabel labelReferencia;
     private javax.swing.JLabel labelRegistrarDatos;
     private javax.swing.JLabel labelTelefono;
+    private components.PanelRound limpiarbtn;
+    private javax.swing.JLabel limpiarbtntxt;
     private javax.swing.JLabel logo;
     private javax.swing.JTextField txtApellidos;
     private javax.swing.JTextField txtDNI;
@@ -453,7 +547,7 @@ public class registrar_datos extends javax.swing.JFrame {
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNombres;
     private javax.swing.JTextField txtTelefono;
-    private javax.swing.JPanel volverbutton;
-    private javax.swing.JLabel volverbuttontxt;
+    private components.PanelRound volverBtn;
+    private javax.swing.JLabel volverBtnTxt;
     // End of variables declaration//GEN-END:variables
 }
