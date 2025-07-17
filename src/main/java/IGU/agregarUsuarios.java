@@ -42,6 +42,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
         texto03 = new javax.swing.JLabel();
         exitBtn = new javax.swing.JPanel();
         exitBtnTxt = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         loginPnl = new javax.swing.JPanel();
         loginLabel = new javax.swing.JLabel();
         usuarioLabel = new javax.swing.JLabel();
@@ -117,6 +118,8 @@ public class agregarUsuarios extends javax.swing.JFrame {
             .addComponent(exitBtnTxt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\logo_temporal.png")); // NOI18N
+
         javax.swing.GroupLayout principalLayout = new javax.swing.GroupLayout(principal);
         principal.setLayout(principalLayout);
         principalLayout.setHorizontalGroup(
@@ -127,18 +130,24 @@ public class agregarUsuarios extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(principalLayout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         principalLayout.setVerticalGroup(
             principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(principalLayout.createSequentialGroup()
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(200, 200, 200)
+                .addGap(96, 96, 96)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(texto01)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(texto02)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(texto03)
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
 
         background.add(principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 360, 550));
@@ -285,7 +294,9 @@ public class agregarUsuarios extends javax.swing.JFrame {
 
         volverBtnTxt.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         volverBtnTxt.setForeground(new java.awt.Color(255, 255, 255));
+        volverBtnTxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\backIcon.png")); // NOI18N
         volverBtnTxt.setText("Volver");
+        volverBtnTxt.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 13, 1, 1));
         volverBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverBtnTxtMouseClicked(evt);
@@ -302,9 +313,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
         volverBtn.setLayout(volverBtnLayout);
         volverBtnLayout.setHorizontalGroup(
             volverBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(volverBtnLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(volverBtnTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
+            .addComponent(volverBtnTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
         volverBtnLayout.setVerticalGroup(
             volverBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -457,6 +466,7 @@ public class agregarUsuarios extends javax.swing.JFrame {
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
     private javax.swing.JPanel header;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel loginPnl;
     private javax.swing.JLabel passLabel;

@@ -14,13 +14,14 @@ import logica.controladoraLogicaLogin;
  */
 public class venta_final extends javax.swing.JFrame {
     int xMouse, yMouse;
-    private CarritoDeCompras carrito = CarritoGlobal.getCarrito();
+    private CarritoDeCompras carrito = new CarritoGlobal().getCarrito();
     controladoraLogicaLogin control;
     Usuario user;
 
     public venta_final(controladoraLogicaLogin control, Usuario user) {
         initComponents();
         this.setSize(900, 550);
+        this.setLocationRelativeTo(null);
         this.control= control;
         this.user= user;
     }

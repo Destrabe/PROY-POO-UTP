@@ -20,6 +20,8 @@ public class tienda_usuario extends javax.swing.JFrame {
 
     public tienda_usuario(controladoraLogicaLogin control, Usuario user) {
         initComponents();
+        this.setSize(900, 550);
+        this.setLocationRelativeTo(null);
         this.control= control;
         this.user= user;
     }
@@ -44,18 +46,21 @@ public class tienda_usuario extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         btnaniadir15pro = new javax.swing.JButton();
         jcomboboxaniadir15pro = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
         panelRound2 = new components.PanelRound();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         btnaniadir15promax = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jcomboboxaniadir15promax = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
         panelRound3 = new components.PanelRound();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         btnaniadir16 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jcomboboxaniadir16pro = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -103,6 +108,8 @@ public class tienda_usuario extends javax.swing.JFrame {
         volverbutton.setBackground(new java.awt.Color(30, 41, 59));
         volverbutton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        volverbuttontxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\backIcon.png")); // NOI18N
+        volverbuttontxt.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 13, 1, 1));
         volverbuttontxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverbuttontxtMouseClicked(evt);
@@ -117,7 +124,7 @@ public class tienda_usuario extends javax.swing.JFrame {
         volverbutton.add(volverbuttontxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         btncategorialaptops.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        btncategorialaptops.setForeground(new java.awt.Color(0, 0, 0));
+        btncategorialaptops.setForeground(new java.awt.Color(255, 255, 255));
         btncategorialaptops.setText("LAPTOPS");
         btncategorialaptops.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,10 +133,11 @@ public class tienda_usuario extends javax.swing.JFrame {
         });
 
         labelTienda.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        labelTienda.setForeground(new java.awt.Color(255, 255, 255));
         labelTienda.setText("TIENDA");
 
         btncategoriacelulares.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        btncategoriacelulares.setForeground(new java.awt.Color(0, 0, 0));
+        btncategoriacelulares.setForeground(new java.awt.Color(255, 255, 255));
         btncategoriacelulares.setText("CELULARES");
         btncategoriacelulares.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +217,10 @@ public class tienda_usuario extends javax.swing.JFrame {
         jcomboboxaniadir15pro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", " " }));
         panelRound1.add(jcomboboxaniadir15pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 60, 30));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\iphone15pro.png")); // NOI18N
+        jLabel2.setText("jLabel1");
+        panelRound1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 100, 90));
+
         panelRound2.setBackground(new java.awt.Color(153, 153, 153));
         panelRound2.setPreferredSize(new java.awt.Dimension(200, 270));
         panelRound2.setRoundBottomLeft(50);
@@ -246,6 +258,10 @@ public class tienda_usuario extends javax.swing.JFrame {
         jcomboboxaniadir15promax.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
         panelRound2.add(jcomboboxaniadir15promax, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 60, -1));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\iphone15promax.png")); // NOI18N
+        jLabel4.setText("jLabel1");
+        panelRound2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, 120));
+
         panelRound3.setBackground(new java.awt.Color(153, 153, 153));
         panelRound3.setRoundBottomLeft(50);
         panelRound3.setRoundBottomRight(50);
@@ -280,6 +296,10 @@ public class tienda_usuario extends javax.swing.JFrame {
 
         jcomboboxaniadir16pro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
         panelRound3.add(jcomboboxaniadir16pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 60, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\iphone16.png")); // NOI18N
+        jLabel1.setText("jLabel1");
+        panelRound3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 120, 120));
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
@@ -412,11 +432,14 @@ public class tienda_usuario extends javax.swing.JFrame {
     private javax.swing.JButton btncategorialaptops;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

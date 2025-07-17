@@ -22,6 +22,7 @@ public class ver_compras_realizadas extends javax.swing.JFrame {
     public ver_compras_realizadas(CarritoDeCompras carrito,controladoraLogicaLogin control, Usuario user) {
         initComponents();
         this.setSize(900, 550);
+        this.setLocationRelativeTo(null);
         this.carrito=carrito;
         cargarComprasEnTabla();
         this.control= control;
@@ -59,6 +60,8 @@ public class ver_compras_realizadas extends javax.swing.JFrame {
         header1 = new javax.swing.JPanel();
         exitBtn = new javax.swing.JPanel();
         exitBtnTxt = new javax.swing.JLabel();
+        volverBtn = new components.PanelRound();
+        volverBtnTxt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -158,12 +161,49 @@ public class ver_compras_realizadas extends javax.swing.JFrame {
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        volverBtn.setBackground(new java.awt.Color(30, 41, 59));
+        volverBtn.setRoundBottomLeft(25);
+        volverBtn.setRoundBottomRight(25);
+        volverBtn.setRoundTopLeft(25);
+        volverBtn.setRoundTopRight(25);
+
+        volverBtnTxt.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        volverBtnTxt.setForeground(new java.awt.Color(255, 255, 255));
+        volverBtnTxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\backIcon.png")); // NOI18N
+        volverBtnTxt.setText("Volver");
+        volverBtnTxt.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 13, 1, 1));
+        volverBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                volverBtnTxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                volverBtnTxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                volverBtnTxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout volverBtnLayout = new javax.swing.GroupLayout(volverBtn);
+        volverBtn.setLayout(volverBtnLayout);
+        volverBtnLayout.setHorizontalGroup(
+            volverBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(volverBtnTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        volverBtnLayout.setVerticalGroup(
+            volverBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(volverBtnTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(volverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(267, 267, 267)
                 .addComponent(jLabel1))
@@ -175,10 +215,14 @@ public class ver_compras_realizadas extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addComponent(jLabel1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(volverBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(37, 37, 37)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -240,6 +284,21 @@ public class ver_compras_realizadas extends javax.swing.JFrame {
         yMouse = evt.getY();
     }//GEN-LAST:event_header1MousePressed
 
+    private void volverBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverBtnTxtMouseClicked
+        principalAdmin ver=new principalAdmin(control, user);
+        ver.setVisible(true);
+        ver.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_volverBtnTxtMouseClicked
+
+    private void volverBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverBtnTxtMouseEntered
+        volverBtn.setBackground(new Color(70, 95, 125));
+    }//GEN-LAST:event_volverBtnTxtMouseEntered
+
+    private void volverBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverBtnTxtMouseExited
+        volverBtn.setBackground(new Color(45,62,85));
+    }//GEN-LAST:event_volverBtnTxtMouseExited
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
@@ -248,6 +307,8 @@ public class ver_compras_realizadas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tablaComprasRealizadas;
+    private components.PanelRound volverBtn;
+    private javax.swing.JLabel volverBtnTxt;
     private javax.swing.JPanel volverbutton;
     private javax.swing.JLabel volverbuttontxt;
     // End of variables declaration//GEN-END:variables

@@ -2,6 +2,8 @@
 package IGU;
 
 import java.awt.Color;
+import logica.CarritoDeCompras;
+import logica.CarritoGlobal;
 import logica.Usuario;
 import logica.controladoraLogicaLogin;
 
@@ -15,6 +17,7 @@ public class principalAdmin extends javax.swing.JFrame {
     int xMouse, yMouse;
     controladoraLogicaLogin control;
     Usuario user;
+    private CarritoDeCompras carrito = CarritoGlobal.getCarrito();
     
     public principalAdmin(controladoraLogicaLogin control,Usuario user) {
         initComponents();
@@ -32,12 +35,12 @@ public class principalAdmin extends javax.swing.JFrame {
         tituloLbl = new javax.swing.JLabel();
         botones = new javax.swing.JPanel();
         verComprasBtn = new javax.swing.JButton();
-        editarProductosBtn = new javax.swing.JButton();
         verUsuariosBtn = new javax.swing.JButton();
         cerrarBtn = new javax.swing.JButton();
         header = new javax.swing.JPanel();
         exitBtn = new javax.swing.JPanel();
         exitBtnTxt = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -66,14 +69,6 @@ public class principalAdmin extends javax.swing.JFrame {
             }
         });
 
-        editarProductosBtn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        editarProductosBtn.setText("Editar Productos");
-        editarProductosBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editarProductosBtnActionPerformed(evt);
-            }
-        });
-
         verUsuariosBtn.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         verUsuariosBtn.setText("Ver Usuarios");
         verUsuariosBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -95,19 +90,17 @@ public class principalAdmin extends javax.swing.JFrame {
         botonesLayout.setHorizontalGroup(
             botonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(verComprasBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(editarProductosBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
-            .addComponent(cerrarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(cerrarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
             .addComponent(verUsuariosBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         botonesLayout.setVerticalGroup(
             botonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botonesLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addComponent(verComprasBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(editarProductosBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(56, 56, 56)
                 .addComponent(verUsuariosBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(52, 52, 52)
                 .addComponent(cerrarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
@@ -173,6 +166,9 @@ public class principalAdmin extends javax.swing.JFrame {
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\logo_temporal.png")); // NOI18N
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
@@ -182,7 +178,9 @@ public class principalAdmin extends javax.swing.JFrame {
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(botones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(143, 143, 143))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,8 +188,13 @@ public class principalAdmin extends javax.swing.JFrame {
                 .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tituloLbl)
-                .addGap(32, 32, 32)
-                .addComponent(botones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(botones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(jLabel1)))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
 
@@ -214,12 +217,11 @@ public class principalAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void verComprasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verComprasBtnActionPerformed
-        // TODO add your handling code here:
+        ver_compras_realizadas ver=new ver_compras_realizadas(carrito,control, user);
+        ver.setVisible(true);
+        ver.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_verComprasBtnActionPerformed
-
-    private void editarProductosBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarProductosBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editarProductosBtnActionPerformed
 
     private void headerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMousePressed
         xMouse = evt.getX();
@@ -264,10 +266,10 @@ public class principalAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel background;
     private javax.swing.JPanel botones;
     private javax.swing.JButton cerrarBtn;
-    private javax.swing.JButton editarProductosBtn;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
     private javax.swing.JPanel header;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel tituloLbl;
     private javax.swing.JButton verComprasBtn;
     private javax.swing.JButton verUsuariosBtn;

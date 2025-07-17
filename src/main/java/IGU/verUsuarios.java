@@ -123,7 +123,7 @@ public class verUsuarios extends javax.swing.JFrame {
         volverBtn.setBackground(new java.awt.Color(30, 41, 59));
 
         volverBtnTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        volverBtnTxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/homeIcon.png"))); // NOI18N
+        volverBtnTxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\homeIcon.png")); // NOI18N
         volverBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverBtnTxtMouseClicked(evt);
@@ -150,7 +150,7 @@ public class verUsuarios extends javax.swing.JFrame {
         deleteBtn.setBackground(new java.awt.Color(30, 41, 59));
 
         deleteBtnTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        deleteBtnTxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/deleteIcon.png"))); // NOI18N
+        deleteBtnTxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\deleteIcon.png")); // NOI18N
         deleteBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 deleteBtnTxtMouseClicked(evt);
@@ -177,7 +177,7 @@ public class verUsuarios extends javax.swing.JFrame {
         editBtn.setBackground(new java.awt.Color(30, 41, 59));
 
         editBtnTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        editBtnTxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/editIcon.png"))); // NOI18N
+        editBtnTxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\editIcon.png")); // NOI18N
         editBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 editBtnTxtMouseClicked(evt);
@@ -204,7 +204,7 @@ public class verUsuarios extends javax.swing.JFrame {
         addBtn.setBackground(new java.awt.Color(30, 41, 59));
 
         addBtnTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        addBtnTxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/addIcon.png"))); // NOI18N
+        addBtnTxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\addIcon.png")); // NOI18N
         addBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addBtnTxtMouseClicked(evt);
@@ -231,7 +231,7 @@ public class verUsuarios extends javax.swing.JFrame {
         refreshBtn.setBackground(new java.awt.Color(30, 41, 59));
 
         refreshBtnTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        refreshBtnTxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/refreshIcon.png"))); // NOI18N
+        refreshBtnTxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\refreshIcon.png")); // NOI18N
         refreshBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 refreshBtnTxtMouseClicked(evt);

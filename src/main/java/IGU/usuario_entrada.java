@@ -20,6 +20,7 @@ public class usuario_entrada extends javax.swing.JFrame {
     public usuario_entrada(controladoraLogicaLogin control, Usuario user) {
         initComponents();
         this.setSize(900, 550);
+        this.setLocationRelativeTo(null);
         this.control= control;
         this.user= user;
         carrito.limpiarCarrito();
@@ -39,12 +40,12 @@ public class usuario_entrada extends javax.swing.JFrame {
         header1 = new javax.swing.JPanel();
         exitBtn = new javax.swing.JPanel();
         exitBtnTxt = new javax.swing.JLabel();
+        botones = new javax.swing.JPanel();
         productosbtn = new components.PanelRound();
         productosbtntxt = new javax.swing.JLabel();
-        vercomprasbtn = new components.PanelRound();
-        vercomprasbtntxt = new javax.swing.JLabel();
         cerrarsesionbtn = new components.PanelRound();
         cerrarsesionbtntxt = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         checkbox1.setLabel("checkbox1");
 
@@ -53,12 +54,10 @@ public class usuario_entrada extends javax.swing.JFrame {
         setResizable(false);
 
         background.setBackground(new java.awt.Color(255, 255, 255));
-        background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         sistemadeventasusuariolabel.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
         sistemadeventasusuariolabel.setForeground(new java.awt.Color(0, 0, 0));
         sistemadeventasusuariolabel.setText("SISTEMA DE VENTAS");
-        background.add(sistemadeventasusuariolabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 41, -1, -1));
 
         header1.setBackground(new java.awt.Color(255, 255, 255));
         header1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -122,7 +121,7 @@ public class usuario_entrada extends javax.swing.JFrame {
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        background.add(header1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        botones.setBackground(new java.awt.Color(255, 255, 255));
 
         productosbtn.setBackground(new java.awt.Color(45, 62, 85));
         productosbtn.setRoundBottomLeft(20);
@@ -149,48 +148,12 @@ public class usuario_entrada extends javax.swing.JFrame {
         productosbtn.setLayout(productosbtnLayout);
         productosbtnLayout.setHorizontalGroup(
             productosbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(productosbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(productosbtntxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
         productosbtnLayout.setVerticalGroup(
             productosbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(productosbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addComponent(productosbtntxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
         );
-
-        background.add(productosbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 129, 430, -1));
-
-        vercomprasbtn.setBackground(new java.awt.Color(45, 62, 85));
-        vercomprasbtn.setRoundBottomLeft(20);
-        vercomprasbtn.setRoundBottomRight(20);
-        vercomprasbtn.setRoundTopLeft(20);
-        vercomprasbtn.setRoundTopRight(20);
-
-        vercomprasbtntxt.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
-        vercomprasbtntxt.setForeground(new java.awt.Color(255, 255, 255));
-        vercomprasbtntxt.setText("                 VER COMPRAS");
-        vercomprasbtntxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                vercomprasbtntxtMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                vercomprasbtntxtMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                vercomprasbtntxtMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout vercomprasbtnLayout = new javax.swing.GroupLayout(vercomprasbtn);
-        vercomprasbtn.setLayout(vercomprasbtnLayout);
-        vercomprasbtnLayout.setHorizontalGroup(
-            vercomprasbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(vercomprasbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        vercomprasbtnLayout.setVerticalGroup(
-            vercomprasbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(vercomprasbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-        );
-
-        background.add(vercomprasbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 266, 430, -1));
 
         cerrarsesionbtn.setBackground(new java.awt.Color(45, 62, 85));
         cerrarsesionbtn.setRoundBottomLeft(20);
@@ -217,14 +180,72 @@ public class usuario_entrada extends javax.swing.JFrame {
         cerrarsesionbtn.setLayout(cerrarsesionbtnLayout);
         cerrarsesionbtnLayout.setHorizontalGroup(
             cerrarsesionbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cerrarsesionbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
+            .addComponent(cerrarsesionbtntxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
         cerrarsesionbtnLayout.setVerticalGroup(
             cerrarsesionbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(cerrarsesionbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
         );
 
-        background.add(cerrarsesionbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 408, -1, -1));
+        javax.swing.GroupLayout botonesLayout = new javax.swing.GroupLayout(botones);
+        botones.setLayout(botonesLayout);
+        botonesLayout.setHorizontalGroup(
+            botonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botonesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(productosbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botonesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cerrarsesionbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        botonesLayout.setVerticalGroup(
+            botonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botonesLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(productosbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(cerrarsesionbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51))
+        );
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\logo_temporal.png")); // NOI18N
+
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(botones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(136, 136, 136))
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(sistemadeventasusuariolabel, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(106, 106, 106))
+        );
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sistemadeventasusuariolabel)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(botones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(59, Short.MAX_VALUE))
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(161, 161, 161))))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -234,7 +255,9 @@ public class usuario_entrada extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -281,21 +304,6 @@ public class usuario_entrada extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_productosbtntxtMouseClicked
 
-    private void vercomprasbtntxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vercomprasbtntxtMouseEntered
-        vercomprasbtn.setBackground(new Color(70, 95, 125));
-    }//GEN-LAST:event_vercomprasbtntxtMouseEntered
-
-    private void vercomprasbtntxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vercomprasbtntxtMouseExited
-        vercomprasbtn.setBackground(new Color(45,62,85));
-    }//GEN-LAST:event_vercomprasbtntxtMouseExited
-
-    private void vercomprasbtntxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vercomprasbtntxtMouseClicked
-        ver_compras_realizadas comprasRealizadas = new ver_compras_realizadas(carrito,control,user);
-        comprasRealizadas.setVisible(true);
-        comprasRealizadas.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_vercomprasbtntxtMouseClicked
-
     private void cerrarsesionbtntxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarsesionbtntxtMouseEntered
         cerrarsesionbtn.setBackground(new Color(70, 95, 125));
     }//GEN-LAST:event_cerrarsesionbtntxtMouseEntered
@@ -314,16 +322,16 @@ public class usuario_entrada extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
+    private javax.swing.JPanel botones;
     private components.PanelRound cerrarsesionbtn;
     private javax.swing.JLabel cerrarsesionbtntxt;
     private java.awt.Checkbox checkbox1;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
     private javax.swing.JPanel header1;
+    private javax.swing.JLabel jLabel1;
     private components.PanelRound productosbtn;
     private javax.swing.JLabel productosbtntxt;
     private javax.swing.JLabel sistemadeventasusuariolabel;
-    private components.PanelRound vercomprasbtn;
-    private javax.swing.JLabel vercomprasbtntxt;
     // End of variables declaration//GEN-END:variables
 }

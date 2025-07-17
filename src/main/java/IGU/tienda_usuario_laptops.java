@@ -21,6 +21,8 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
 
     public tienda_usuario_laptops(controladoraLogicaLogin control, Usuario user) {
         initComponents();
+        this.setSize(900, 550);
+        this.setLocationRelativeTo(null);
         this.control= control;
         this.user= user;
     }
@@ -45,17 +47,20 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         labelPrecioLaptopLenovo = new javax.swing.JLabel();
         btnaniadirlenovo = new javax.swing.JButton();
         jcomboboxaniadirlenovo = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
         panelRound2 = new components.PanelRound();
         labelLaptopHP = new javax.swing.JLabel();
         labelPrecioLaptopHp = new javax.swing.JLabel();
         btnaniadirhp = new javax.swing.JButton();
         jcomboboxaniadirhp = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
         panelRound3 = new components.PanelRound();
         labelLaptopVictus = new javax.swing.JLabel();
         labelPrecioLaptopVictus = new javax.swing.JLabel();
         btnaniadirvictus = new javax.swing.JButton();
         labelVictus = new javax.swing.JLabel();
         jcomboboxaniadirvictus = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -103,6 +108,8 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         volverbutton.setBackground(new java.awt.Color(30, 41, 59));
         volverbutton.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        volverbuttontxt.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\backIcon.png")); // NOI18N
+        volverbuttontxt.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 13, 1, 1));
         volverbuttontxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 volverbuttontxtMouseClicked(evt);
@@ -117,14 +124,15 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         volverbutton.add(volverbuttontxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         btncategorialaptops.setFont(new java.awt.Font("Ebrima", 0, 24)); // NOI18N
-        btncategorialaptops.setForeground(new java.awt.Color(0, 0, 0));
+        btncategorialaptops.setForeground(new java.awt.Color(255, 255, 255));
         btncategorialaptops.setText("LAPTOPS");
 
         labelTienda.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        labelTienda.setForeground(new java.awt.Color(255, 255, 255));
         labelTienda.setText("TIENDA");
 
         btncategoriacelulares.setFont(new java.awt.Font("Ebrima", 0, 24)); // NOI18N
-        btncategoriacelulares.setForeground(new java.awt.Color(0, 0, 0));
+        btncategoriacelulares.setForeground(new java.awt.Color(255, 255, 255));
         btncategoriacelulares.setText("CELULARES");
         btncategoriacelulares.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,6 +206,9 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
 
         jcomboboxaniadirlenovo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
 
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\lenovo.png")); // NOI18N
+        jLabel3.setText("jLabel3");
+
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
         panelRound1.setLayout(panelRound1Layout);
         panelRound1Layout.setHorizontalGroup(
@@ -216,11 +227,17 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
                                 .addComponent(jcomboboxaniadirlenovo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(labelLaptopLenovo))))
                 .addContainerGap(9, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(160, 160, 160)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(labelLaptopLenovo)
                 .addGap(7, 7, 7)
                 .addComponent(labelPrecioLaptopLenovo)
@@ -257,6 +274,8 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
 
         jcomboboxaniadirhp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", " " }));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\hp.png")); // NOI18N
+
         javax.swing.GroupLayout panelRound2Layout = new javax.swing.GroupLayout(panelRound2);
         panelRound2.setLayout(panelRound2Layout);
         panelRound2Layout.setHorizontalGroup(
@@ -264,22 +283,27 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
             .addGroup(panelRound2Layout.createSequentialGroup()
                 .addGroup(panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRound2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(labelLaptopHP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelRound2Layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addComponent(labelPrecioLaptopHp))
                     .addGroup(panelRound2Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(btnaniadirhp, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jcomboboxaniadirhp, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 10, 10))
+                        .addComponent(jcomboboxaniadirhp, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelRound2Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(labelLaptopHP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelRound2Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
         panelRound2Layout.setVerticalGroup(
             panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound2Layout.createSequentialGroup()
-                .addGap(149, 149, 149)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelLaptopHP)
                 .addGap(18, 18, 18)
                 .addComponent(labelPrecioLaptopHp)
@@ -319,6 +343,9 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
 
         jcomboboxaniadirvictus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\victus.png")); // NOI18N
+        jLabel2.setText("jLabel2");
+
         javax.swing.GroupLayout panelRound3Layout = new javax.swing.GroupLayout(panelRound3);
         panelRound3.setLayout(panelRound3Layout);
         panelRound3Layout.setHorizontalGroup(
@@ -338,13 +365,18 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
                             .addGroup(panelRound3Layout.createSequentialGroup()
                                 .addGap(50, 50, 50)
                                 .addComponent(labelVictus))
-                            .addComponent(labelLaptopVictus))))
+                            .addComponent(labelLaptopVictus)))
+                    .addGroup(panelRound3Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelRound3Layout.setVerticalGroup(
             panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound3Layout.createSequentialGroup()
-                .addGap(140, 140, 140)
+                .addGap(16, 16, 16)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRound3Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
@@ -369,19 +401,16 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
                 .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCompletarCompraTienda, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCompletarCompraTienda, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(50, 50, 50)
-                                .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(60, 60, 60)
-                                .addComponent(panelRound3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(43, 43, 43))
+                        .addGap(50, 50, 50)
+                        .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(panelRound3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(labelLaptops)
-                        .addGap(66, 66, 66))))
+                        .addComponent(labelLaptops)))
+                .addGap(43, 43, 43))
             .addComponent(exitBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel1Layout.setVerticalGroup(
@@ -495,6 +524,9 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
     private javax.swing.JButton btncategorialaptops;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JComboBox<String> jcomboboxaniadirhp;
     private javax.swing.JComboBox<String> jcomboboxaniadirlenovo;

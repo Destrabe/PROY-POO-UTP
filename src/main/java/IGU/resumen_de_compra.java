@@ -24,6 +24,7 @@ public class resumen_de_compra extends javax.swing.JFrame {
     public resumen_de_compra(controladoraLogicaLogin control, Usuario user) {
         initComponents();
         this.setSize(900, 550);
+        this.setLocationRelativeTo(null);
         this.control = control;
         this.user = user;
         carrito.limpiarProductosInvalidos();

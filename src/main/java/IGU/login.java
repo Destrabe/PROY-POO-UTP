@@ -19,12 +19,6 @@ public class login extends javax.swing.JFrame {
     
     public login() {
         initComponents();
-        /*URL url = getClass().getResource("/logo/logo_temporal.png");
-        if (url != null) {
-            logo.setIcon(new javax.swing.ImageIcon(url));
-        }else {
-            System.out.println("Imagen no encontrada en /logo/logo_temporal.png");
-        }*/
         this.setSize(900, 550);
         this.setLocationRelativeTo(null);
         control = new controladoraLogicaLogin();
@@ -41,6 +35,7 @@ public class login extends javax.swing.JFrame {
         message01 = new javax.swing.JLabel();
         message02 = new javax.swing.JLabel();
         message03 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         loginPnl = new javax.swing.JPanel();
         loginLabel = new javax.swing.JLabel();
         usuarioLabel = new javax.swing.JLabel();
@@ -80,6 +75,8 @@ public class login extends javax.swing.JFrame {
         message03.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         message03.setText("Optimiza tu proceso de ventas");
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\marco\\Documents\\NetBeansProjects\\PROY-POO\\src\\main\\resources\\assets\\logo_temporal.png")); // NOI18N
+
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
@@ -87,11 +84,17 @@ public class login extends javax.swing.JFrame {
             .addComponent(message01, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
             .addComponent(message02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(message03, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGap(290, 290, 290)
+                .addGap(131, 131, 131)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(message01)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(message02)
@@ -387,6 +390,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
     private javax.swing.JPanel header;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel loginPnl;
     private javax.swing.JLabel message01;
