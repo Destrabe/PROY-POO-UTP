@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence">
+  <persistence-unit name="loginPU" transaction-type="RESOURCE_LOCAL">
+    <class>logica.Usuario</class>
+    <class>logica.rol</class>
+    <properties>
+      <!-- Conexión Railway PostgreSQL -->
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://nozomi.proxy.rlwy.net:50400/railway"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.password" value="gPAJOroxpPIcMxFgemGiEiBWZMkHGAut"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <!-- Configuración Hibernate -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>

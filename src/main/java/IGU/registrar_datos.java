@@ -29,7 +29,7 @@ public class registrar_datos extends javax.swing.JFrame {
         if (SesionDeCompra.getNombres()!= null) {
             txtNombres.setText(SesionDeCompra.getNombres());
             txtApellidos.setText(SesionDeCompra.getApellidos());
-            txtDNI.setText(SesionDeCompra.getDni());
+            dniTxt.setText(SesionDeCompra.getDni());
             txtDireccion.setText(SesionDeCompra.getDireccion());
             txtTelefono.setText(SesionDeCompra.getTelefono());
             txtEmail.setText(SesionDeCompra.getEmail());
@@ -52,7 +52,7 @@ public class registrar_datos extends javax.swing.JFrame {
         labelDireccion = new javax.swing.JLabel();
         labelTelefono = new javax.swing.JLabel();
         labelReferencia = new javax.swing.JLabel();
-        txtDNI = new javax.swing.JTextField();
+        dniTxt = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
         txtTelefono = new javax.swing.JTextField();
         txtNombres = new javax.swing.JTextField();
@@ -289,7 +289,7 @@ public class registrar_datos extends javax.swing.JFrame {
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(dniTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addGap(100, 100, 100)
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -335,7 +335,7 @@ public class registrar_datos extends javax.swing.JFrame {
                     .addGroup(backgroundLayout.createSequentialGroup()
                         .addComponent(txtApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(txtDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dniTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(10, 10, 10)
@@ -405,7 +405,7 @@ public class registrar_datos extends javax.swing.JFrame {
 
     private void limpiarbtntxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiarbtntxtMouseClicked
         txtApellidos.setText("");
-        txtDNI.setText("");
+        dniTxt.setText("");
         txtDireccion.setText("");
         txtEmail.setText("");
         txtNombres.setText("");
@@ -423,7 +423,7 @@ public class registrar_datos extends javax.swing.JFrame {
     private void guardarbtntxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarbtntxtMouseClicked
         String nombres = txtNombres.getText();
         String apellidos = txtApellidos.getText();
-        String dni = txtDNI.getText();
+        String dni = dniTxt.getText();
         String direccion = txtDireccion.getText();
         String telefono = txtTelefono.getText();
         String email = txtEmail.getText();
@@ -518,6 +518,7 @@ public class registrar_datos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
+    private javax.swing.JTextField dniTxt;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
     private components.PanelRound guardarbtn;
@@ -533,7 +534,6 @@ public class registrar_datos extends javax.swing.JFrame {
     private components.PanelRound limpiarbtn;
     private javax.swing.JLabel limpiarbtntxt;
     private javax.swing.JTextField txtApellidos;
-    private javax.swing.JTextField txtDNI;
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNombres;
