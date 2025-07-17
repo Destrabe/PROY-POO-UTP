@@ -42,7 +42,6 @@ public class editarUsuario extends javax.swing.JFrame {
 
         background = new javax.swing.JPanel();
         principal = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
         texto01 = new javax.swing.JLabel();
         texto02 = new javax.swing.JLabel();
         texto03 = new javax.swing.JLabel();
@@ -79,8 +78,6 @@ public class editarUsuario extends javax.swing.JFrame {
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         principal.setBackground(new java.awt.Color(30, 41, 59));
-
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
 
         texto01.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         texto01.setForeground(new java.awt.Color(255, 255, 255));
@@ -136,24 +133,18 @@ public class editarUsuario extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, principalLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(logo)
-                .addGap(102, 102, 102))
         );
         principalLayout.setVerticalGroup(
             principalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(principalLayout.createSequentialGroup()
                 .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(logo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(302, 302, 302)
                 .addComponent(texto01)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(texto02)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(texto03)
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
 
         background.add(principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, -1, 550));
@@ -307,7 +298,6 @@ public class editarUsuario extends javax.swing.JFrame {
 
         volverBtnTxt.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         volverBtnTxt.setForeground(new java.awt.Color(255, 255, 255));
-        volverBtnTxt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/backIcon.png"))); // NOI18N
         volverBtnTxt.setText("Volver");
         volverBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -499,7 +489,6 @@ public class editarUsuario extends javax.swing.JFrame {
     private javax.swing.JPanel header;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel loginPnl;
-    private javax.swing.JLabel logo;
     private javax.swing.JLabel passLabel;
     private javax.swing.JTextField passTxt;
     private javax.swing.JPanel principal;

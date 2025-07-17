@@ -226,7 +226,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Icons/homeIcon.png"/>
+                      <Image iconType="3" name="/assets/homeIcon.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -261,7 +261,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Icons/deleteIcon.png"/>
+                      <Image iconType="3" name="/assets/deleteIcon.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -296,7 +296,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Icons/editIcon.png"/>
+                      <Image iconType="3" name="/assets/editIcon.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -331,7 +331,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Icons/addIcon.png"/>
+                      <Image iconType="3" name="/assets/addIcon.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -366,7 +366,7 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Icons/refreshIcon.png"/>
+                      <Image iconType="3" name="/assets/refreshIcon.png"/>
                     </Property>
                   </Properties>
                   <Events>

@@ -2,6 +2,7 @@ package IGU;
 
 import components.TextPrompt;
 import java.awt.Color;
+import java.net.URL;
 import javax.swing.JOptionPane;
 import logica.Usuario;
 import logica.controladoraLogicaLogin;
@@ -18,6 +19,12 @@ public class login extends javax.swing.JFrame {
     
     public login() {
         initComponents();
+        /*URL url = getClass().getResource("/logo/logo_temporal.png");
+        if (url != null) {
+            logo.setIcon(new javax.swing.ImageIcon(url));
+        }else {
+            System.out.println("Imagen no encontrada en /logo/logo_temporal.png");
+        }*/
         this.setSize(900, 550);
         this.setLocationRelativeTo(null);
         control = new controladoraLogicaLogin();
@@ -31,7 +38,6 @@ public class login extends javax.swing.JFrame {
 
         background = new javax.swing.JPanel();
         panelPrincipal = new javax.swing.JPanel();
-        logo = new javax.swing.JLabel();
         message01 = new javax.swing.JLabel();
         message02 = new javax.swing.JLabel();
         message03 = new javax.swing.JLabel();
@@ -59,8 +65,6 @@ public class login extends javax.swing.JFrame {
 
         panelPrincipal.setBackground(new java.awt.Color(30, 41, 59));
 
-        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/logo_temporal.png"))); // NOI18N
-
         message01.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         message01.setForeground(new java.awt.Color(255, 255, 255));
         message01.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -80,26 +84,20 @@ public class login extends javax.swing.JFrame {
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrincipalLayout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
-                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(105, 105, 105))
-            .addComponent(message01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(message01, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
             .addComponent(message02, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(message03, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(290, 290, 290)
                 .addComponent(message01)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(message02)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(message03)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
 
         background.add(panelPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 550));
@@ -391,7 +389,6 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPanel header;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel loginPnl;
-    private javax.swing.JLabel logo;
     private javax.swing.JLabel message01;
     private javax.swing.JLabel message02;
     private javax.swing.JLabel message03;

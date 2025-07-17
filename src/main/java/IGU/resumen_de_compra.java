@@ -30,15 +30,7 @@ public class resumen_de_compra extends javax.swing.JFrame {
         List<Compra> comprasActuales = carrito.generarComprasSimuladas();
         mostrarResumen(comprasActuales);
         scrolltxtresumen_compra.setBorder(null);
-        txtresumen_compra.setBorder(BorderFactory.createEmptyBorder());
-        URL imgURL = getClass().getResource("/imagenes/icono.png");
-        if (imgURL != null) {
-            ImageIcon icon = new ImageIcon(imgURL);
-            jLabel2.setIcon(icon);
-        } else {
-            System.err.println("No se encontró la imagen: /imagenes/icono.png");
-        }
-
+        txtresumen_compra.setBorder(BorderFactory.createEmptyBorder());        
     }
 
     public void mostrarResumen(List<Compra> compras) {
@@ -70,7 +62,7 @@ public class resumen_de_compra extends javax.swing.JFrame {
             resumen.append("Precio unitario: S/ ").append(String.format("%.2f", precio)).append("\n");
             resumen.append("Subtotal: S/ ").append(String.format("%.2f", subtotal)).append("\n");
             resumen.append("__________________________________________________________\n");
-
+            
             totalGeneral += subtotal;
         }
 
@@ -84,11 +76,9 @@ public class resumen_de_compra extends javax.swing.JFrame {
     private void initComponents() {
 
         background = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        panelresultados = new javax.swing.JPanel();
         scrolltxtresumen_compra = new javax.swing.JScrollPane();
         txtresumen_compra = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
         labelResumenDeCompra = new javax.swing.JLabel();
         volverbutton = new javax.swing.JPanel();
         header1 = new javax.swing.JPanel();
@@ -103,9 +93,9 @@ public class resumen_de_compra extends javax.swing.JFrame {
 
         background.setBackground(new java.awt.Color(0, 153, 204));
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 4, true));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        panelresultados.setBackground(new java.awt.Color(0, 153, 204));
+        panelresultados.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 4, true));
+        panelresultados.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtresumen_compra.setBackground(new java.awt.Color(0, 153, 204));
         txtresumen_compra.setColumns(20);
@@ -113,7 +103,7 @@ public class resumen_de_compra extends javax.swing.JFrame {
         txtresumen_compra.setRows(5);
         scrolltxtresumen_compra.setViewportView(txtresumen_compra);
 
-        jPanel1.add(scrolltxtresumen_compra, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 4, 870, 310));
+        panelresultados.add(scrolltxtresumen_compra, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 4, 870, 310));
 
         labelResumenDeCompra.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
         labelResumenDeCompra.setForeground(new java.awt.Color(0, 0, 0));
@@ -187,6 +177,7 @@ public class resumen_de_compra extends javax.swing.JFrame {
         completarcomprabtn.setRoundTopRight(20);
 
         completarcomprabtntxt.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        completarcomprabtntxt.setForeground(new java.awt.Color(255, 255, 255));
         completarcomprabtntxt.setText("   COMPLETAR COMPRA");
         completarcomprabtntxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -226,10 +217,9 @@ public class resumen_de_compra extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(backgroundLayout.createSequentialGroup()
-                                .addComponent(jLabel2)
                                 .addGap(129, 129, 129)
                                 .addComponent(labelResumenDeCompra))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(panelresultados, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(backgroundLayout.createSequentialGroup()
                         .addGap(337, 337, 337)
                         .addComponent(completarcomprabtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -241,18 +231,13 @@ public class resumen_de_compra extends javax.swing.JFrame {
                 .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(volverbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel2))
-                    .addGroup(backgroundLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelResumenDeCompra)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelResumenDeCompra)
                 .addGap(35, 35, 35)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelresultados, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(completarcomprabtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -300,7 +285,7 @@ public class resumen_de_compra extends javax.swing.JFrame {
     }//GEN-LAST:event_completarcomprabtntxtMouseEntered
 
     private void completarcomprabtntxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_completarcomprabtntxtMouseExited
-        completarcomprabtn.setBackground(new Color(70, 95, 125));
+        completarcomprabtn.setBackground(new Color(45,62,85));
     }//GEN-LAST:event_completarcomprabtntxtMouseExited
 
     private void completarcomprabtntxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_completarcomprabtntxtMouseClicked
@@ -317,10 +302,8 @@ public class resumen_de_compra extends javax.swing.JFrame {
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
     private javax.swing.JPanel header1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelResumenDeCompra;
+    private javax.swing.JPanel panelresultados;
     private javax.swing.JScrollPane scrolltxtresumen_compra;
     private javax.swing.JTextArea txtresumen_compra;
     private javax.swing.JPanel volverbutton;

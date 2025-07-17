@@ -30,8 +30,6 @@ public class venta_final extends javax.swing.JFrame {
     private void initComponents() {
 
         background = new javax.swing.JPanel();
-        btnCerrar = new javax.swing.JButton();
-        btnSeguirComprando = new javax.swing.JButton();
         panelGracias = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -41,30 +39,16 @@ public class venta_final extends javax.swing.JFrame {
         header1 = new javax.swing.JPanel();
         exitBtn = new javax.swing.JPanel();
         exitBtnTxt = new javax.swing.JLabel();
+        cerrarbtn = new components.PanelRound();
+        cerrarbtntxt = new javax.swing.JLabel();
+        seguircomprandobtn = new components.PanelRound();
+        seguircomprandobtntxt = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
         background.setBackground(new java.awt.Color(0, 153, 204));
-
-        btnCerrar.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        btnCerrar.setText("CERRAR");
-        btnCerrar.setFocusPainted(false);
-        btnCerrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCerrarActionPerformed(evt);
-            }
-        });
-
-        btnSeguirComprando.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        btnSeguirComprando.setText("SEGUIR COMPRANDO");
-        btnSeguirComprando.setFocusPainted(false);
-        btnSeguirComprando.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSeguirComprandoActionPerformed(evt);
-            }
-        });
 
         panelGracias.setBackground(new java.awt.Color(0, 153, 204));
         panelGracias.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 4, true));
@@ -158,6 +142,70 @@ public class venta_final extends javax.swing.JFrame {
             .addComponent(exitBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        cerrarbtn.setBackground(new java.awt.Color(45, 62, 85));
+        cerrarbtn.setRoundBottomLeft(20);
+        cerrarbtn.setRoundBottomRight(20);
+        cerrarbtn.setRoundTopLeft(20);
+        cerrarbtn.setRoundTopRight(20);
+
+        cerrarbtntxt.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        cerrarbtntxt.setForeground(new java.awt.Color(255, 255, 255));
+        cerrarbtntxt.setText("            CERRAR");
+        cerrarbtntxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cerrarbtntxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cerrarbtntxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cerrarbtntxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout cerrarbtnLayout = new javax.swing.GroupLayout(cerrarbtn);
+        cerrarbtn.setLayout(cerrarbtnLayout);
+        cerrarbtnLayout.setHorizontalGroup(
+            cerrarbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cerrarbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+        );
+        cerrarbtnLayout.setVerticalGroup(
+            cerrarbtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(cerrarbtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+        );
+
+        seguircomprandobtn.setBackground(new java.awt.Color(45, 62, 85));
+        seguircomprandobtn.setRoundBottomLeft(20);
+        seguircomprandobtn.setRoundBottomRight(20);
+        seguircomprandobtn.setRoundTopLeft(20);
+        seguircomprandobtn.setRoundTopRight(20);
+
+        seguircomprandobtntxt.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        seguircomprandobtntxt.setForeground(new java.awt.Color(255, 255, 255));
+        seguircomprandobtntxt.setText(" SEGUIR COMPRANDO");
+        seguircomprandobtntxt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                seguircomprandobtntxtMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                seguircomprandobtntxtMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                seguircomprandobtntxtMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout seguircomprandobtnLayout = new javax.swing.GroupLayout(seguircomprandobtn);
+        seguircomprandobtn.setLayout(seguircomprandobtnLayout);
+        seguircomprandobtnLayout.setHorizontalGroup(
+            seguircomprandobtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(seguircomprandobtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+        );
+        seguircomprandobtnLayout.setVerticalGroup(
+            seguircomprandobtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(seguircomprandobtntxt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
@@ -171,10 +219,10 @@ public class venta_final extends javax.swing.JFrame {
                 .addGap(208, 208, 208)
                 .addComponent(panelGracias, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(btnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
-                .addComponent(btnSeguirComprando, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(160, 160, 160)
+                .addComponent(cerrarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(seguircomprandobtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,9 +235,10 @@ public class venta_final extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(panelGracias, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSeguirComprando, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cerrarbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(seguircomprandobtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -224,22 +273,6 @@ public class venta_final extends javax.swing.JFrame {
         volverbuttontxt.setForeground(Color.black);
     }//GEN-LAST:event_volverbuttontxtMouseExited
 
-    private void btnSeguirComprandoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeguirComprandoActionPerformed
-        tienda_usuario tienda = new tienda_usuario(control,user);
-        tienda.setVisible(true);
-        tienda.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnSeguirComprandoActionPerformed
-
-    private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-        carrito.limpiarCarrito();
-        SesionDeCompra.cerrarSesion();
-        usuario_entrada entrada = new usuario_entrada(control,user);
-        entrada.setVisible(true);
-        entrada.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnCerrarActionPerformed
-
     private void exitBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitBtnTxtMouseClicked
         System.exit(0);
     }//GEN-LAST:event_exitBtnTxtMouseClicked
@@ -265,10 +298,42 @@ public class venta_final extends javax.swing.JFrame {
         yMouse = evt.getY();
     }//GEN-LAST:event_header1MousePressed
 
+    private void cerrarbtntxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarbtntxtMouseEntered
+        cerrarbtn.setBackground(new Color(70, 95, 125));
+    }//GEN-LAST:event_cerrarbtntxtMouseEntered
+
+    private void cerrarbtntxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarbtntxtMouseExited
+        cerrarbtn.setBackground(new Color(45,62,85));
+    }//GEN-LAST:event_cerrarbtntxtMouseExited
+
+    private void cerrarbtntxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarbtntxtMouseClicked
+        carrito.limpiarCarrito();
+        SesionDeCompra.cerrarSesion();
+        usuario_entrada entrada = new usuario_entrada(control,user);
+        entrada.setVisible(true);
+        entrada.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_cerrarbtntxtMouseClicked
+
+    private void seguircomprandobtntxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seguircomprandobtntxtMouseEntered
+        seguircomprandobtn.setBackground(new Color(70, 95, 125));
+    }//GEN-LAST:event_seguircomprandobtntxtMouseEntered
+
+    private void seguircomprandobtntxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seguircomprandobtntxtMouseExited
+        seguircomprandobtn.setBackground(new Color(45,62,85));
+    }//GEN-LAST:event_seguircomprandobtntxtMouseExited
+
+    private void seguircomprandobtntxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_seguircomprandobtntxtMouseClicked
+        tienda_usuario tienda = new tienda_usuario(control,user);
+        tienda.setVisible(true);
+        tienda.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_seguircomprandobtntxtMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
-    private javax.swing.JButton btnCerrar;
-    private javax.swing.JButton btnSeguirComprando;
+    private components.PanelRound cerrarbtn;
+    private javax.swing.JLabel cerrarbtntxt;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
     private javax.swing.JPanel header1;
@@ -276,6 +341,8 @@ public class venta_final extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel labelCompraRealizada;
     private javax.swing.JPanel panelGracias;
+    private components.PanelRound seguircomprandobtn;
+    private javax.swing.JLabel seguircomprandobtntxt;
     private javax.swing.JPanel volverbutton;
     private javax.swing.JLabel volverbuttontxt;
     // End of variables declaration//GEN-END:variables

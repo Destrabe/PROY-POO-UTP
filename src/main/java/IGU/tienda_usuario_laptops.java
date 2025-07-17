@@ -2,6 +2,7 @@
 package IGU;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import logica.CarritoDeCompras;
 import logica.CarritoGlobal;
 import logica.Usuario;
@@ -40,24 +41,18 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         btnCompletarCompraTienda = new javax.swing.JButton();
         labelLaptops = new javax.swing.JLabel();
         panelRound1 = new components.PanelRound();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        labelLaptopLenovo = new javax.swing.JLabel();
+        labelPrecioLaptopLenovo = new javax.swing.JLabel();
         btnaniadirlenovo = new javax.swing.JButton();
-        ImagenLaptopLenovo = new javax.swing.JLabel();
         panelRound2 = new components.PanelRound();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        labelLaptopHP = new javax.swing.JLabel();
+        labelPrecioLaptopHp = new javax.swing.JLabel();
         btnaniadirhp = new javax.swing.JButton();
-        ImagenLaptopHp = new javax.swing.JLabel();
         panelRound3 = new components.PanelRound();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        labelLaptopVictus = new javax.swing.JLabel();
+        labelPrecioLaptopVictus = new javax.swing.JLabel();
         btnaniadirvictus = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
-        ImagenLaptopVictus = new javax.swing.JLabel();
+        labelVictus = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -188,17 +183,16 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         panelRound1.setRoundTopLeft(50);
         panelRound1.setRoundTopRight(50);
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelRound1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("LAPTOP LENOVO");
-        panelRound1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        labelLaptopLenovo.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
+        labelLaptopLenovo.setForeground(new java.awt.Color(0, 0, 0));
+        labelLaptopLenovo.setText("LAPTOP LENOVO");
+        panelRound1.add(labelLaptopLenovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("S/ 2900");
-        panelRound1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        labelPrecioLaptopLenovo.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        labelPrecioLaptopLenovo.setForeground(new java.awt.Color(0, 0, 0));
+        labelPrecioLaptopLenovo.setText("S/ 3900");
+        panelRound1.add(labelPrecioLaptopLenovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         btnaniadirlenovo.setText("Añadir");
         btnaniadirlenovo.addActionListener(new java.awt.event.ActionListener() {
@@ -207,9 +201,6 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
             }
         });
         panelRound1.add(btnaniadirlenovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
-
-        ImagenLaptopLenovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/lenovo.png"))); // NOI18N
-        panelRound1.add(ImagenLaptopLenovo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 160, 270));
 
@@ -220,17 +211,16 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         panelRound2.setRoundTopLeft(50);
         panelRound2.setRoundTopRight(50);
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelRound2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("LAPTOP HP");
-        panelRound2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 100, -1));
+        labelLaptopHP.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
+        labelLaptopHP.setForeground(new java.awt.Color(0, 0, 0));
+        labelLaptopHP.setText("LAPTOP HP");
+        panelRound2.add(labelLaptopHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 100, -1));
 
-        jLabel10.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("S/ 3090");
-        panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        labelPrecioLaptopHp.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        labelPrecioLaptopHp.setForeground(new java.awt.Color(0, 0, 0));
+        labelPrecioLaptopHp.setText("S/ 3090");
+        panelRound2.add(labelPrecioLaptopHp, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         btnaniadirhp.setText("Añadir");
         btnaniadirhp.addActionListener(new java.awt.event.ActionListener() {
@@ -240,9 +230,6 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         });
         panelRound2.add(btnaniadirhp, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
 
-        ImagenLaptopHp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/hp.png"))); // NOI18N
-        panelRound2.add(ImagenLaptopHp, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
         jPanel1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 160, -1));
 
         panelRound3.setBackground(new java.awt.Color(153, 153, 153));
@@ -251,17 +238,16 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         panelRound3.setRoundTopLeft(50);
         panelRound3.setRoundTopRight(50);
         panelRound3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelRound3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("LAPTOP GAYMER");
-        panelRound3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        labelLaptopVictus.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
+        labelLaptopVictus.setForeground(new java.awt.Color(0, 0, 0));
+        labelLaptopVictus.setText("LAPTOP GAYMER");
+        panelRound3.add(labelLaptopVictus, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("S/ 4500");
-        panelRound3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        labelPrecioLaptopVictus.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        labelPrecioLaptopVictus.setForeground(new java.awt.Color(0, 0, 0));
+        labelPrecioLaptopVictus.setText("S/ 4500");
+        panelRound3.add(labelPrecioLaptopVictus, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         btnaniadirvictus.setText("Añadir");
         btnaniadirvictus.addActionListener(new java.awt.event.ActionListener() {
@@ -271,13 +257,10 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
         });
         panelRound3.add(btnaniadirvictus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
 
-        jLabel12.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setText("VICTUS");
-        panelRound3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
-
-        ImagenLaptopVictus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/victus.png"))); // NOI18N
-        panelRound3.add(ImagenLaptopVictus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        labelVictus.setFont(new java.awt.Font("SansSerif", 1, 17)); // NOI18N
+        labelVictus.setForeground(new java.awt.Color(0, 0, 0));
+        labelVictus.setText("VICTUS");
+        panelRound3.add(labelVictus, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
         jPanel1.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 140, 160, 270));
 
@@ -328,6 +311,11 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
     }//GEN-LAST:event_volverbuttontxtMouseExited
 
     private void btnCompletarCompraTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompletarCompraTiendaActionPerformed
+        if (carrito.getProductos().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "El carrito está vacio, Añade productos");
+            return;
+        }
+        
         registrar_datos registrar = new registrar_datos(carrito,control,user);
         registrar.setVisible(true);
         registrar.setLocationRelativeTo(null);
@@ -354,9 +342,6 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
     }//GEN-LAST:event_btnaniadirvictusActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ImagenLaptopHp;
-    private javax.swing.JLabel ImagenLaptopLenovo;
-    private javax.swing.JLabel ImagenLaptopVictus;
     private javax.swing.JButton btnCompletarCompraTienda;
     private javax.swing.JButton btnaniadirhp;
     private javax.swing.JButton btnaniadirlenovo;
@@ -365,19 +350,16 @@ public class tienda_usuario_laptops extends javax.swing.JFrame {
     private javax.swing.JButton btncategorialaptops;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitBtnTxt;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelLaptopHP;
+    private javax.swing.JLabel labelLaptopLenovo;
+    private javax.swing.JLabel labelLaptopVictus;
     private javax.swing.JLabel labelLaptops;
+    private javax.swing.JLabel labelPrecioLaptopHp;
+    private javax.swing.JLabel labelPrecioLaptopLenovo;
+    private javax.swing.JLabel labelPrecioLaptopVictus;
     private javax.swing.JLabel labelTienda;
+    private javax.swing.JLabel labelVictus;
     private components.PanelRound panelRound1;
     private components.PanelRound panelRound2;
     private components.PanelRound panelRound3;

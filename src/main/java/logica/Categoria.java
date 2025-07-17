@@ -36,9 +36,5 @@ public class Categoria implements Serializable{
 
     public void setNombrecategoria(String nombrecategoria) {
         this.nombrecategoria = nombrecategoria;
-    }
-
-    
-    
-    
+    }   
 }

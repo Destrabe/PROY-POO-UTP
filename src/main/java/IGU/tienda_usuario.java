@@ -44,21 +44,18 @@ public class tienda_usuario extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btnaniadir15pro = new javax.swing.JButton();
-        ImagenIphone15pro = new javax.swing.JLabel();
         panelRound2 = new components.PanelRound();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         btnaniadir15promax = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
-        ImagenIphone15promax = new javax.swing.JLabel();
         panelRound3 = new components.PanelRound();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         btnaniadir16 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
-        ImagenIphone16promax = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -137,6 +134,11 @@ public class tienda_usuario extends javax.swing.JFrame {
         btncategoriacelulares.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         btncategoriacelulares.setForeground(new java.awt.Color(0, 0, 0));
         btncategoriacelulares.setText("CELULARES");
+        btncategoriacelulares.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncategoriacelularesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout paneltiendaLayout = new javax.swing.GroupLayout(paneltienda);
         paneltienda.setLayout(paneltiendaLayout);
@@ -210,9 +212,6 @@ public class tienda_usuario extends javax.swing.JFrame {
         });
         panelRound1.add(btnaniadir15pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
 
-        ImagenIphone15pro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/iphone15pro.png"))); // NOI18N
-        panelRound1.add(ImagenIphone15pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
         background.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 160, 270));
 
         panelRound2.setBackground(new java.awt.Color(153, 153, 153));
@@ -248,9 +247,6 @@ public class tienda_usuario extends javax.swing.JFrame {
         jLabel13.setText("MAX");
         panelRound2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
-        ImagenIphone15promax.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/iphone15promax.png"))); // NOI18N
-        panelRound2.add(ImagenIphone15promax, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
         background.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 160, -1));
 
         panelRound3.setBackground(new java.awt.Color(153, 153, 153));
@@ -284,9 +280,6 @@ public class tienda_usuario extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("MAX");
         panelRound3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
-
-        ImagenIphone16promax.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/iphone16.png"))); // NOI18N
-        panelRound3.add(ImagenIphone16promax, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         background.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 140, 160, 270));
 
@@ -367,10 +360,11 @@ public class tienda_usuario extends javax.swing.JFrame {
         carrito.agregarProducto("IPHONE 16 PRO MAX",4500.0);
     }//GEN-LAST:event_btnaniadir16ActionPerformed
 
+    private void btncategoriacelularesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncategoriacelularesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncategoriacelularesActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ImagenIphone15pro;
-    private javax.swing.JLabel ImagenIphone15promax;
-    private javax.swing.JLabel ImagenIphone16promax;
     private javax.swing.JPanel background;
     private javax.swing.JButton btnCompletarCompraTienda;
     private javax.swing.JButton btnaniadir15pro;
