@@ -40,29 +40,28 @@ public class tienda_usuario extends javax.swing.JFrame {
         btnCompletarCompraTienda = new javax.swing.JButton();
         labelCelulares = new javax.swing.JLabel();
         panelRound1 = new components.PanelRound();
-        jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         btnaniadir15pro = new javax.swing.JButton();
+        jcomboboxaniadir15pro = new javax.swing.JComboBox<>();
         panelRound2 = new components.PanelRound();
-        jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         btnaniadir15promax = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
+        jcomboboxaniadir15promax = new javax.swing.JComboBox<>();
         panelRound3 = new components.PanelRound();
-        jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         btnaniadir16 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
+        jcomboboxaniadir16pro = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
         background.setBackground(new java.awt.Color(255, 255, 255));
-        background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         exitBtn.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -98,8 +97,6 @@ public class tienda_usuario extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(exitBtnTxt))
         );
-
-        background.add(exitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 0, -1, -1));
 
         paneltienda.setBackground(new java.awt.Color(30, 41, 59));
 
@@ -167,8 +164,6 @@ public class tienda_usuario extends javax.swing.JFrame {
                 .addContainerGap(217, Short.MAX_VALUE))
         );
 
-        background.add(paneltienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 550));
-
         btnCompletarCompraTienda.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         btnCompletarCompraTienda.setForeground(new java.awt.Color(0, 0, 0));
         btnCompletarCompraTienda.setText("COMPLETAR COMPRA");
@@ -178,12 +173,10 @@ public class tienda_usuario extends javax.swing.JFrame {
                 btnCompletarCompraTiendaActionPerformed(evt);
             }
         });
-        background.add(btnCompletarCompraTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, 250, 60));
 
         labelCelulares.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
         labelCelulares.setForeground(new java.awt.Color(0, 0, 0));
         labelCelulares.setText("CELULARES");
-        background.add(labelCelulares, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, -1, -1));
 
         panelRound1.setBackground(new java.awt.Color(153, 153, 153));
         panelRound1.setRoundBottomLeft(50);
@@ -191,7 +184,6 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound1.setRoundTopLeft(50);
         panelRound1.setRoundTopRight(50);
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelRound1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -201,18 +193,21 @@ public class tienda_usuario extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("S/ 3800");
-        panelRound1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        panelRound1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
         btnaniadir15pro.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        btnaniadir15pro.setForeground(new java.awt.Color(0, 0, 0));
         btnaniadir15pro.setText("Añadir");
         btnaniadir15pro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnaniadir15proActionPerformed(evt);
             }
         });
-        panelRound1.add(btnaniadir15pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
+        panelRound1.add(btnaniadir15pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 70, 30));
 
-        background.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 160, 270));
+        jcomboboxaniadir15pro.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jcomboboxaniadir15pro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", " " }));
+        panelRound1.add(jcomboboxaniadir15pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 60, 30));
 
         panelRound2.setBackground(new java.awt.Color(153, 153, 153));
         panelRound2.setPreferredSize(new java.awt.Dimension(200, 270));
@@ -221,7 +216,6 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound2.setRoundTopLeft(50);
         panelRound2.setRoundTopRight(50);
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelRound2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 120));
 
         jLabel8.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
@@ -234,20 +228,23 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         btnaniadir15promax.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        btnaniadir15promax.setForeground(new java.awt.Color(0, 0, 0));
         btnaniadir15promax.setText("Añadir");
         btnaniadir15promax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnaniadir15promaxActionPerformed(evt);
             }
         });
-        panelRound2.add(btnaniadir15promax, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
+        panelRound2.add(btnaniadir15promax, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 70, 30));
 
         jLabel13.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("MAX");
         panelRound2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
-        background.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 160, -1));
+        jcomboboxaniadir15promax.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jcomboboxaniadir15promax.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+        panelRound2.add(jcomboboxaniadir15promax, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 60, -1));
 
         panelRound3.setBackground(new java.awt.Color(153, 153, 153));
         panelRound3.setRoundBottomLeft(50);
@@ -255,7 +252,6 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound3.setRoundTopLeft(50);
         panelRound3.setRoundTopRight(50);
         panelRound3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        panelRound3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
@@ -268,20 +264,59 @@ public class tienda_usuario extends javax.swing.JFrame {
         panelRound3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
 
         btnaniadir16.setFont(new java.awt.Font("SansSerif", 0, 12)); // NOI18N
+        btnaniadir16.setForeground(new java.awt.Color(0, 0, 0));
         btnaniadir16.setText("Añadir");
         btnaniadir16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnaniadir16ActionPerformed(evt);
             }
         });
-        panelRound3.add(btnaniadir16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 120, -1));
+        panelRound3.add(btnaniadir16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 70, 30));
 
         jLabel12.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("MAX");
         panelRound3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
-        background.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 140, 160, 270));
+        jcomboboxaniadir16pro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" }));
+        panelRound3.add(jcomboboxaniadir16pro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 60, 30));
+
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(paneltienda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelCelulares)
+                    .addGroup(backgroundLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(panelRound3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCompletarCompraTienda, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(paneltienda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGap(140, 140, 140)
+                .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(labelCelulares)
+                .addGap(38, 38, 38)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelRound3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addComponent(btnCompletarCompraTienda, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(exitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -349,15 +384,18 @@ public class tienda_usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_btncategorialaptopsActionPerformed
 
     private void btnaniadir15proActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadir15proActionPerformed
-        carrito.agregarProducto("IPHONE 15 PRO", 3800.0);        
+        int cantidad= Integer.parseInt(jcomboboxaniadir15pro.getSelectedItem().toString());
+        carrito.agregarProducto("IPHONE 15 PRO", 3800.0,cantidad);        
     }//GEN-LAST:event_btnaniadir15proActionPerformed
 
     private void btnaniadir15promaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadir15promaxActionPerformed
-        carrito.agregarProducto("IPHONE 15 PRO MAX",4000.0);
+        int cantidad= Integer.parseInt(jcomboboxaniadir15promax.getSelectedItem().toString());
+        carrito.agregarProducto("IPHONE 15 PRO MAX",4000.0,cantidad);
     }//GEN-LAST:event_btnaniadir15promaxActionPerformed
 
     private void btnaniadir16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaniadir16ActionPerformed
-        carrito.agregarProducto("IPHONE 16 PRO MAX",4500.0);
+        int cantidad= Integer.parseInt(jcomboboxaniadir16pro.getSelectedItem().toString());
+        carrito.agregarProducto("IPHONE 16 PRO MAX",4500.0,cantidad);
     }//GEN-LAST:event_btnaniadir16ActionPerformed
 
     private void btncategoriacelularesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncategoriacelularesActionPerformed
@@ -379,12 +417,12 @@ public class tienda_usuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JComboBox<String> jcomboboxaniadir15pro;
+    private javax.swing.JComboBox<String> jcomboboxaniadir15promax;
+    private javax.swing.JComboBox<String> jcomboboxaniadir16pro;
     private javax.swing.JLabel labelCelulares;
     private javax.swing.JLabel labelTienda;
     private components.PanelRound panelRound1;

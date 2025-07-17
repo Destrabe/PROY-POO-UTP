@@ -45,8 +45,6 @@ public class usuario_entrada extends javax.swing.JFrame {
         vercomprasbtntxt = new javax.swing.JLabel();
         cerrarsesionbtn = new components.PanelRound();
         cerrarsesionbtntxt = new javax.swing.JLabel();
-        volverBtn = new components.PanelRound();
-        volverBtnTxt = new javax.swing.JLabel();
 
         checkbox1.setLabel("checkbox1");
 
@@ -228,42 +226,6 @@ public class usuario_entrada extends javax.swing.JFrame {
 
         background.add(cerrarsesionbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 408, -1, -1));
 
-        volverBtn.setBackground(new java.awt.Color(30, 41, 59));
-        volverBtn.setRoundBottomLeft(25);
-        volverBtn.setRoundBottomRight(25);
-        volverBtn.setRoundTopLeft(25);
-        volverBtn.setRoundTopRight(25);
-
-        volverBtnTxt.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        volverBtnTxt.setForeground(new java.awt.Color(255, 255, 255));
-        volverBtnTxt.setText("Volver");
-        volverBtnTxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                volverBtnTxtMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                volverBtnTxtMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                volverBtnTxtMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout volverBtnLayout = new javax.swing.GroupLayout(volverBtn);
-        volverBtn.setLayout(volverBtnLayout);
-        volverBtnLayout.setHorizontalGroup(
-            volverBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(volverBtnLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(volverBtnTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
-        );
-        volverBtnLayout.setVerticalGroup(
-            volverBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(volverBtnTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-        );
-
-        background.add(volverBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(52, 41, -1, -1));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -349,21 +311,6 @@ public class usuario_entrada extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_cerrarsesionbtntxtMouseClicked
 
-    private void volverBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverBtnTxtMouseClicked
-        login ver=new login();
-        ver.setVisible(true);
-        ver.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_volverBtnTxtMouseClicked
-
-    private void volverBtnTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverBtnTxtMouseEntered
-        volverBtn.setBackground(new Color(70, 95, 125));
-    }//GEN-LAST:event_volverBtnTxtMouseEntered
-
-    private void volverBtnTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverBtnTxtMouseExited
-        volverBtn.setBackground(new Color(45,62,85));
-    }//GEN-LAST:event_volverBtnTxtMouseExited
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
@@ -378,7 +325,5 @@ public class usuario_entrada extends javax.swing.JFrame {
     private javax.swing.JLabel sistemadeventasusuariolabel;
     private components.PanelRound vercomprasbtn;
     private javax.swing.JLabel vercomprasbtntxt;
-    private components.PanelRound volverBtn;
-    private javax.swing.JLabel volverBtnTxt;
     // End of variables declaration//GEN-END:variables
 }

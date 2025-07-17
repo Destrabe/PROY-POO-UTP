@@ -11,7 +11,7 @@ public class CarritoDeCompras {
     private Map<String, Integer> productos = new HashMap<>();
     private Map<String, Double> precios = new HashMap<>();
     
-    public void agregarProducto(String nombre, double precio) {
+    public void agregarProducto(String nombre, double precio, int cantidad) {
         if (nombre == null || nombre.trim().isEmpty()) {
             System.out.println("Producto invalido: nombre vacio o nulo");
             return;
@@ -20,7 +20,7 @@ public class CarritoDeCompras {
             System.out.println("Producto invalido: precio incorrecto");
             return;
         }
-        productos.put(nombre, productos.getOrDefault(nombre, 0) + 1);
+        productos.put(nombre, productos.getOrDefault(nombre, 0) + cantidad);
         precios.put(nombre, precio);
     }
     
