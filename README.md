@@ -25,6 +25,18 @@ El sistema permite realizar operaciones básicas de gestión comercial mediante 
 - Conexión a base de datos remota (Railway – PostgreSQL)
 - Interfaz amigable con Java Swing
 
+## 🔑 Credenciales de acceso
+
+Estas credenciales están disponibles para pruebas académicas:
+
+- **Usuario administrador**
+  - Usuario: `admin01`
+  - Contraseña: `123`
+  
+- **Usuario estándar**
+  - Usuario: `user01`
+  - Contraseña: `123`
+
 ## 🚫 Importante
 
 > El proyecto **no puede ejecutarse directamente** desde este repositorio debido a la ausencia de credenciales de conexión a la base de datos.  
@@ -37,5 +49,3 @@ El sistema permite realizar operaciones básicas de gestión comercial mediante 
 ---
 
 📁 Este repositorio forma parte de un proyecto académico de fin de ciclo.
-
-
