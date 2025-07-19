@@ -37,11 +37,6 @@ Estas credenciales están disponibles para pruebas académicas:
   - Usuario: `user01`
   - Contraseña: `123`
 
-## 🚫 Importante
-
-> El proyecto **no puede ejecutarse directamente** desde este repositorio debido a la ausencia de credenciales de conexión a la base de datos.  
-> Si deseas probarlo, deberás configurar manualmente la conexión a tu propia base de datos PostgreSQL.
-
 ## 🧪 Estado del proyecto
 
 ✅ Funcional – Proyecto finalizado para entrega académica.
